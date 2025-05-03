@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debian - Sistem Operasi Open-Source yang Stabil</title>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="quizD.html" class="quiz-btn">🧠 Kerjakan Quiz</a>
+        </nav>
+        <link rel="stylesheet" href="./hardware.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        nav {
+  display: flex;
+  align-items: center;
+  background-color: #343333;
+  padding: 12px 30px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 16px;
+  margin-right: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+  font-weight: 500;
+}
+
+nav a:hover {
+  background-color: #575757;
+  transform: scale(1.05);
+}
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="menu-toggle" onclick="toggleDrawer()">☰</div>
+        <h1 class="typing">Debian  </h1>
+    </header>
+
+    <nav id="drawerNav">>
+        <a href="#pengertian">Pengertian</a>
+        <a href="#sejarah">Sejarah</a>
+        <a href="#karakteristik">Karakteristik</a>
+        <a href="#rilis">Rilis</a>
+        <a href="#kelebihan">Kelebihan</a>
+        <a href="#kekurangan">Kekurangan</a>
+        <a href="#instalasi">Instalasi</a>
+        <a href="#pengelolaan">Pengelolaan Paket</a>
+        <a href="#server">Penggunaan di Server</a>
+        <a href="#komunitas">Komunitas</a>
+       
+    </nav>
+
+    <section id="pengertian">
+        <h2 class="moving-text">1. Pengertian Debian</h2>
+        <p class="moving-text">Debian adalah salah satu distribusi Linux yang terkenal dan banyak digunakan di berbagai sistem, baik untuk desktop, server, maupun perangkat lainnya. Debian dikenal dengan kestabilannya dan komunitas pengembang yang aktif dalam menjaga dan mengembangkan distribusi ini. Sistem operasi Debian bersifat open-source, yang berarti siapa pun dapat melihat, memodifikasi, dan mendistribusikan kode sumbernya sesuai kebutuhan.</p>
+        <p class="moving-text">Debian terdiri dari berbagai paket perangkat lunak yang dikembangkan oleh komunitas di seluruh dunia, yang kemudian diuji dan dikemas menjadi sistem operasi yang stabil dan aman.</p>
+    </section>
+
+    <section id="sejarah">
+        <h2 class="moving-text">2. Sejarah dan Perkembangan Debian</h2>
+        <p class="moving-text">Debian pertama kali dikembangkan oleh Ian Murdock pada tahun 1993. Nama "Debian" berasal dari gabungan nama Ian dan Debra, pasangan suami istri Ian Murdock. Debian bermula sebagai proyek pribadi Ian untuk menciptakan distribusi Linux yang lebih mudah digunakan dan dikelola daripada yang ada saat itu.</p>
+        <p class="moving-text">Debian kemudian berkembang pesat, menjadi distribusi yang didorong oleh komunitas dengan filosofi perangkat lunak bebas dan pengembangan berbasis konsensus. Hingga saat ini, Debian memiliki rilis stabil yang dapat diandalkan dan digunakan oleh banyak pengguna di seluruh dunia.</p>
+    </section>
+
+    <section id="karakteristik">
+        <h2 class="moving-text">3. Karakteristik Utama Debian</h2>
+        <ul class="moving-text">
+            <li>Stabilitas: Debian dikenal sebagai distribusi yang sangat stabil. Setiap rilis Debian menjalani serangkaian pengujian yang ketat untuk memastikan bahwa perangkat lunak yang ada bekerja dengan baik dan tidak menyebabkan masalah.</li>
+            <li>Keamanan: Debian memiliki tim keamanan yang secara aktif mengawasi dan merilis pembaruan keamanan untuk setiap paket perangkat lunak.</li>
+            <li>Filosofi Perangkat Lunak Bebas: Debian berpegang teguh pada prinsip perangkat lunak bebas, artinya semua perangkat lunak yang disertakan dalam repositori Debian harus dapat dipakai, dimodifikasi, dan didistribusikan ulang oleh siapa saja.</li>
+            <li>Paket Manajemen dengan APT: Debian menggunakan sistem manajemen paket APT (Advanced Package Tool), yang memudahkan pengguna untuk menginstal, menghapus, dan memperbarui perangkat lunak.</li>
+            <li>Bergantung pada Komunitas: Pengembangan Debian dilakukan oleh komunitas global yang besar dan aktif, tanpa dominasi dari perusahaan atau organisasi tertentu.</li>
+        </ul>
+    </section>
+
+    <section id="rilis">
+        <h2 class="moving-text">4. Struktur Rilis Debian</h2>
+        <ul class="moving-text">
+            <li>Stable: Rilis stabil adalah versi yang telah diuji dengan ketat dan dijamin bekerja dengan baik. Ini adalah versi yang disarankan untuk penggunaan di server atau sistem produksi. Rilis stabil menerima pembaruan keamanan secara berkala.</li>
+            <li>Testing: Rilis pengujian adalah versi yang masih dalam pengembangan dan memiliki lebih banyak pembaruan perangkat lunak terbaru. Versi ini tidak semanjur versi stabil, tetapi lebih mutakhir.</li>
+            <li>Unstable: Rilis yang tidak stabil adalah versi paling mutakhir dari Debian yang berisi pembaruan perangkat lunak terbaru, tetapi lebih rentan terhadap bug dan masalah stabilitas. Ini cocok bagi pengembang atau pengguna yang ingin mencoba teknologi terbaru.</li>
+        </ul>
+        <p class="moving-text">Debian juga menyediakan Backports (versi terbaru perangkat lunak yang di-backport ke rilis stabil) dan Security Updates untuk rilis stabil guna menjaga sistem tetap aman.</p>
+    </section>
+
+    <section id="kelebihan">
+        <h2 class="moving-text">5. Kelebihan Debian</h2>
+        <ul class="moving-text">
+            <li>Kestabilan Tinggi: Salah satu alasan utama mengapa banyak organisasi dan individu memilih Debian adalah kestabilannya. Debian jarang mengalami masalah besar, dan pembaruan sistem dapat dilakukan tanpa khawatir menyebabkan masalah besar.</li>
+            <li>Keamanan: Dengan tim keamanan yang aktif, Debian selalu memberikan pembaruan keamanan yang cepat dan andal.</li>
+            <li>Kompatibilitas dengan Berbagai Arsitektur: Debian mendukung berbagai jenis arsitektur perangkat keras, seperti x86, ARM, PowerPC, dan banyak lagi.</li>
+            <li>Banyak Pilihan Paket Perangkat Lunak: Debian menyediakan ribuan paket perangkat lunak melalui repositori resminya. Pengguna dapat dengan mudah menginstal berbagai jenis perangkat lunak melalui APT.</li>
+            <li>Filosofi Perangkat Lunak Bebas: Debian memiliki komitmen yang kuat terhadap perangkat lunak bebas dan selalu mematuhi pedoman Debian Free Software Guidelines (DFSG).</li>
+            <li>Dokumentasi Lengkap: Debian memiliki dokumentasi yang sangat lengkap dan mudah diakses, yang membantu pengguna dalam mengonfigurasi dan menggunakan sistem Debian dengan efektif.</li>
+        </ul>
+    </section>
+
+    <section id="kekurangan">
+        <h2 class="moving-text">6. Kekurangan Debian</h2>
+        <ul class="moving-text">
+            <li>Kurangnya Pembaruan Terbaru pada Rilis Stabil: Karena Debian mengutamakan stabilitas, perangkat lunak yang tersedia di rilis stabil mungkin sedikit lebih usang dibandingkan dengan distribusi Linux lain yang lebih mutakhir.</li>
+            <li>Kurva Pembelajaran: Debian lebih cocok untuk pengguna yang memiliki pengalaman teknis dengan Linux. Meskipun banyak distribusi berbasis Debian yang lebih ramah pengguna (seperti Ubuntu), Debian murni dapat terasa lebih sulit bagi pemula.</li>
+            <li>Tidak Ada Pengaturan GUI yang Mudah: Debian cenderung lebih mengutamakan penggunaan baris perintah daripada antarmuka grafis untuk konfigurasi sistem, meskipun GUI tersedia.</li>
+        </ul>
+    </section>
+
+    <section id="instalasi">
+        <h2 class="moving-text">7. Instalasi Debian</h2>
+        <p class="moving-text">Instalasi Debian relatif sederhana, meskipun mungkin sedikit lebih teknis daripada distribusi Linux lain seperti Ubuntu. Berikut adalah langkah-langkah dasar dalam menginstal Debian:</p>
+        <ol class="moving-text">
+            <li>Unduh ISO: Unduh file ISO Debian dari situs resmi Debian sesuai dengan arsitektur perangkat keras yang digunakan.</li>
+            <li>Buat Media Instalasi: Gunakan USB atau DVD untuk membuat media instalasi dari file ISO.</li>
+            <li>Mulai Instalasi: Boot komputer menggunakan media instalasi yang telah dibuat. Pilih bahasa dan lokasi yang diinginkan.</li>
+            <li>Partisi Disk: Pilih cara untuk mempartisi disk dan menginstal sistem. Pilihan default biasanya cukup untuk kebanyakan pengguna.</li>
+            <li>Pilih Repositori dan Pengaturan Jaringan: Tentukan repositori yang akan digunakan untuk mengambil paket dan pengaturan jaringan.</li>
+            <li>Pilih Perangkat Lunak yang Akan Diinstal: Pilih lingkungan desktop (misalnya GNOME, KDE, atau XFCE) dan perangkat lunak tambahan yang ingin diinstal.</li>
+            <li>Selesaikan Instalasi: Setelah sistem terinstal, reboot komputer dan masuk ke sistem Debian yang baru.</li>
+        </ol>
+    </section>
+
+    <section id="pengelolaan">
+        <h2 class="moving-text">8. Pengelolaan Paket di Debian</h2>
+        <p class="moving-text">Debian menggunakan APT untuk mengelola perangkat lunak. Beberapa perintah APT yang sering digunakan adalah:</p>
+        <ul class="moving-text">
+            <li>apt-get update: Memperbarui daftar repositori paket.</li>
+            <li>apt-get upgrade: Memperbarui semua paket yang terinstal ke versi terbaru.</li>
+            <li>apt-get install <nama-paket>: Menginstal paket perangkat lunak.</li>
+            <li>apt-get remove <nama-paket>: Menghapus paket perangkat lunak.</li>
+            <li>apt-get dist-upgrade: Memperbarui sistem ke versi distribusi yang lebih baru.</li>
+        </ul>
+        <p class="moving-text">Selain APT, dpkg juga digunakan untuk mengelola paket-paket individu yang telah diunduh.</p>
+    </section>
+
+    <section id="server"> 
+        <h2 class="moving-text">9. Penggunaan Debian di Server</h2>
+        <p class="moving-text">Debian adalah salah satu distribusi Linux yang sering digunakan sebagai sistem operasi server karena stabilitas, keamanan, dan dukungan komunitas yang luas. Berikut adalah beberapa penggunaan Debian di lingkungan server.</p>
+        <p class="moving-text">Debian sangat populer digunakan di server karena stabilitas dan keamanannya. Debian dapat diinstal pada berbagai jenis server, baik untuk server web, server database, atau server lainnya. Debian juga sering digunakan untuk menjalankan server LAMP (Linux, Apache, MySQL, PHP) karena sistemnya yang ringan dan stabil.</p>
+        <br>
+        <li class="moving-text"><b>Server Web - </b>  Debian dapat digunakan sebagai web server dengan Apache, Nginx, atau Lighttpd untuk menjalankan situs web dan aplikasi berbasis web dengan dukungan PHP, Python, atau Node.js.</li>
+        <br>
+        <li class="moving-text"><b>Server Database - </b> Debian mendukung berbagai database seperti MySQL, MariaDB, PostgreSQL, dan MongoDB untuk menyimpan dan mengelola data dalam aplikasi skala kecil hingga enterprise.</li>
+        <br>
+        <li class="moving-text"><b>Server Mail - </b> Debian bisa digunakan sebagai mail server dengan Postfix, Exim, atau Sendmail untuk mengelola pengiriman dan penerimaan email secara aman dan efisien.</li>
+        <br>
+        <li class="moving-text"><b>Server File - </b>Debian dapat dikonfigurasi sebagai file server menggunakan Samba (untuk berbagi file dengan Windows) atau NFS (untuk sistem Linux) agar pengguna dalam jaringan dapat mengakses file bersama.</li>
+        <br>
+        <li class="moving-text"><b>Server virtualisasi - </b> Debian mendukung teknologi virtualisasi seperti KVM, QEMU, VirtualBox, dan Docker untuk menjalankan mesin virtual atau container secara efisien.</li>
+        <br>
+        <li class="moving-text"><b>Server DNS - </b> Debian bisa digunakan sebagai DNS server menggunakan BIND9 atau dnsmasq untuk mengelola resolusi domain dalam jaringan lokal maupun publik. </li>
+        <br>
+        <li class="moving-text"><b>Server DHCP - </b> Debian dapat dikonfigurasi sebagai DHCP server untuk memberikan alamat IP secara otomatis kepada perangkat dalam jaringan menggunakan ISC DHCP Server.</li>
+        <br>
+        <li class="moving-text"><b>Server Proxy - </b> Debian bisa digunakan sebagai proxy server dengan Squid atau Nginx untuk caching dan mengatur lalu lintas internet di jaringan perusahaan atau sekolah.</li> 
+    </section>
+
+    <section id="komunitas">
+        <h2 class="moving-text">10. Komunitas Debian</h2>
+        <p class="moving-text">Debian didukung oleh komunitas global yang besar, yang terdiri dari pengembang, pengguna, dan organisasi. Komunitas Debian berkomunikasi melalui mailing list, forum, dan IRC (Internet Relay Chat). Komunitas ini juga terlibat dalam proses pengembangan Debian, termasuk pengujian, pemeliharaan, dan perbaikan bug.</p>
+        <p class="moving-text">Debian juga memiliki banyak dokumentasi yang dikelola oleh komunitas, yang dapat membantu pengguna baru dan berpengalaman dalam mengonfigurasi dan mengoptimalkan sistem mereka.</p>
+    </section>
+
+    <section id="fitur">
+        <h2 class="moving-text">11. Fitur-fitur Baru di Debian 12</h2>
+        <ul class="moving-text">
+            <li>Kernel Terbaru: Debian 12 mengemas versi terbaru dari Linux kernel yang lebih stabil dan mendukung perangkat keras terbaru.</li>
+            <li>Pembaruan ke Aplikasi Terbaru: Debian 12 mencakup berbagai pembaruan perangkat lunak penting, termasuk peningkatan pada GNOME, LibreOffice, Firefox, dan berbagai aplikasi lainnya.</li>
+            <li>Peningkatan di Sistem Keamanan: Debian 12 membawa berbagai pembaruan di sektor keamanan, termasuk pembaruan lebih cepat terhadap kerentanannya, serta peningkatan kebijakan AppArmor untuk memperkuat perlindungan terhadap aplikasi.</li>
+            <li>Peningkatan dukungan untuk Sistem Virtualisasi dan Kontainer: Debian 12 semakin mempermudah penggunaan sistem virtualisasi dengan dukungan yang lebih baik untuk KVM dan LXC 
+            </li>
+         </ul>\
+     </section>
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    function typeEffect(element, speed) {
+                        let text = element.getAttribute("data-text"); // Ambil teks dari atribut data-text
+                        element.textContent = ""; // Hapus teks asli dulu
+                        let i = 0;
+                
+                        function type() {
+                            if (i < text.length) {
+                                element.textContent += text.charAt(i);
+                                i++;
+                                setTimeout(type, speed);
+                            } else {
+                                element.classList.remove("typing"); // Hapus class setelah selesai
+                            }
+                        }
+                        type();
+                    }
+                
+                    // Ambil semua elemen yang punya class "typing"
+                    let elements = document.querySelectorAll(".typing");
+                    elements.forEach((element, index) => {
+                        element.setAttribute("data-text", element.textContent); // Simpan teks asli
+                        setTimeout(() => typeEffect(element, 50), index * 1000);
+                    });
+                });
+                </script>
+                
+            
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        let paragraphs = document.querySelectorAll(".moving-text");
+                        paragraphs.forEach((p, index) => {
+                            setTimeout(() => {
+                                p.classList.add("show");
+                            }, index * 100); // Delay tiap paragraf biar muncul bertahap
+                        });
+                    });
+                    </script>
+
+<script>
+    function toggleDrawer() {
+      const nav = document.getElementById("drawerNav");
+      nav.classList.toggle("show-drawer");
+    }
+  </script>
+
+
+    <nav class="quiz-nav">
+       
+      </nav>
+            </body>
+            </html>            

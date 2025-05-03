@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MikroTik - Router dan Manajemen Jaringan yang Handal</title>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="quizM.html" class="quiz-btn">🧠 Kerjakan Quiz</a>
+        </nav>
+        <link rel="stylesheet" href="./hardware.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        nav {
+  display: flex;
+  align-items: center;
+  background-color: #343333;
+  padding: 12px 30px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 16px;
+  margin-right: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+  font-weight: 500;
+}
+
+nav a:hover {
+  background-color: #575757;
+  transform: scale(1.05);
+}
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="menu-toggle" onclick="toggleDrawer()">☰</div>
+        <h1 class="typing">MikroTik </h1>
+    </header>
+
+    <nav id="drawerNav">>
+        <a href="#pengertian">Pengertian</a>
+        <a href="#sejarah">Sejarah</a>
+        <a href="#fitur">Fitur</a>
+        <a href="#keunggulan">Keunggulan</a>
+        <a href="#kekurangan">Kekurangan</a>
+        <a href="#instalasi">Instalasi</a>
+        <a href="#pengaturan">Pengaturan Dasar</a>
+        <a href="#penggunaan">Penggunaan MikroTik di Jaringan</a>
+        <a href="#komunitas">Komunitas MikroTik</a>
+    </nav>
+
+    <section id="pengertian">
+        <h2  class="moving-text">1. Pengertian MikroTik</h2>
+        <p  class="moving-text">MikroTik adalah sistem operasi berbasis Linux yang dirancang khusus untuk keperluan jaringan, terutama dalam hal routing, manajemen bandwidth, firewall, dan VPN. MikroTik digunakan secara luas dalam berbagai skala jaringan, mulai dari jaringan kecil hingga jaringan ISP besar. Dengan perangkat lunak RouterOS dan perangkat keras RouterBoard, MikroTik menawarkan solusi yang fleksibel dan terjangkau untuk mengelola lalu lintas jaringan.</p>
+    </section>
+
+    <section id="sejarah">
+        <h2  class="moving-text">2. Sejarah MikroTik</h2>
+        <p  class="moving-text">MikroTik didirikan pada tahun 1996 di Latvia oleh John Tully dan Arnis Riekstins. Awalnya, perusahaan ini berfokus pada pengembangan perangkat lunak berbasis Linux dan MS-DOS untuk sistem jaringan internet. MikroTik mulai dikenal setelah merilis RouterOS, sebuah sistem operasi yang memberikan solusi routing dan manajemen jaringan yang efisien.
+
+            Pada tahun 2002, MikroTik meluncurkan RouterBoard, perangkat keras khusus yang dirancang untuk menjalankan RouterOS dengan lebih optimal. Kombinasi antara RouterOS dan RouterBoard membuat MikroTik menjadi pilihan populer di berbagai industri, termasuk penyedia layanan internet (ISP), perusahaan, hingga institusi pendidikan.
+            
+            Hingga saat ini, MikroTik terus berkembang dan digunakan di lebih dari 200 negara di seluruh dunia, menawarkan solusi jaringan yang handal dengan harga yang lebih terjangkau dibandingkan perangkat jaringan lainnya seperti Cisco atau Juniper.</p>
+    </section>
+
+    <section id="fitur">
+        <h2  class="moving-text">3. Fitur MikroTik</h2>
+        <ul  class="moving-text">
+            <li><b> Routing</b> adalah fitur MikroTik yang berfungsi untuk mengatur jalur pengiriman data antar jaringan, mendukung protokol seperti Static Routing, RIP, OSPF, dan BGP, serta dilengkapi dengan load balancing dan failover untuk memastikan distribusi lalu lintas jaringan yang optimal dan koneksi tetap berjalan meskipun salah satu jalur mengalami gangguan.</li>
+            <li><b>Firewall dan NAT: </b> adalah sistem keamanan pada MikroTik yang digunakan untuk menyaring paket data (packet filtering), melakukan Network Address Translation (NAT), serta melindungi jaringan dari serangan seperti DoS/DDoS, dengan pengaturan aturan (rules) yang fleksibel sesuai kebutuhan keamanan jaringan.            </li>
+            <li><b> VPN ( Virtual Private Network ): </b> adalah fitur yang digunakan untuk membuat koneksi aman melalui jaringan internet, mendukung protokol seperti PPTP, L2TP, OpenVPN, IPsec, SSTP, dan WireGuard, sehingga data yang dikirimkan antara dua jaringan terenkripsi dan terhindar dari penyadapan.</li>
+            <li><b>Wirelles & Hotspot: </b> adalah fitur untuk menyediakan koneksi jaringan nirkabel dengan mendukung mode operasi seperti Access Point, Bridge, Repeater, dan Station, serta dilengkapi dengan sistem Hotspot yang memungkinkan pengguna mengakses jaringan melalui proses autentikasi berbasis username dan password dengan integrasi Radius Server.</li>
+ <li><b> Manajement Bandwidth (QoS)</b> adalah fitur yang digunakan untuk mengatur alokasi dan prioritas bandwidth pada jaringan, menggunakan metode seperti Simple Queue, Queue Tree, dan Burst Mode, sehingga setiap pengguna mendapatkan akses sesuai dengan kebutuhannya tanpa mengganggu performa jaringan.</li>       
+ <li><b> Monitoring & Logging : </b> adalah fitur untuk memantau dan mencatat aktivitas jaringan secara real-time menggunakan alat seperti Torch, Packet Sniffer, dan Log System, sehingga administrator jaringan dapat mendeteksi dan menganalisis masalah yang terjadi pada jaringan.</li>
+ <li><b>DHCP & DNS: </b> adalah fitur yang digunakan untuk memberikan alamat IP secara otomatis kepada perangkat yang terhubung ke jaringan melalui DHCP Server, serta mempercepat akses jaringan dengan DNS Cache yang menyimpan hasil pencarian domain. </li>
+ <li><b>Bridging & VLAN : </b> adalah fitur yang memungkinkan penggabungan beberapa antarmuka jaringan menjadi satu jaringan (bridge) dan membagi jaringan menjadi beberapa segmen virtual (VLAN), sehingga pengelolaan jaringan menjadi lebih fleksibel dan efisien.</li>
+ <li><b>Failover & Load Balancing : </b> adalah fitur yang digunakan untuk mendistribusikan lalu lintas jaringan melalui beberapa jalur koneksi internet secara bersamaan (load balancing) dan mengalihkan jalur koneksi ke jalur cadangan secara otomatis (failover) jika salah satu koneksi mengalami gangguan.</li>
+ <li><b>Cloud & Remote Managemenet </b> adalah fitur yang memungkinkan pengelolaan router secara jarak jauh menggunakan layanan seperti The Dude, IP Cloud, serta aplikasi konfigurasi seperti WinBox, WebFig, dan CLI, sehingga administrator dapat memantau dan mengelola jaringan tanpa harus berada di lokasi fisik perangkat.</li>
+
+        </ul>
+    </section>
+
+    <section id="keunggulan">
+        <h2 class="moving-text">4. Keunggulan MikroTik</h2>
+        <ul class="moving-text">
+            <li><b>Harga Terjangkau - </b> MikroTik menawarkan perangkat dengan harga lebih murah dibandingkan router kelas enterprise, namun tetap memiliki fitur lengkap seperti routing dinamis, firewall, VPN, QoS, load balancing, dan manajemen jaringan yang menjadikannya pilihan ekonomis untuk berbagai kebutuhan.</li>
+            <li><b>Konfigurasi Fleksibel & Mudah - </b> MikroTik dapat dikonfigurasi melalui berbagai metode seperti WinBox (GUI) yang mempermudah pengaturan tanpa perlu menghafal perintah, CLI (Command Line Interface) untuk konfigurasi lanjutan melalui Terminal, serta WebFig (Web-based) yang memungkinkan konfigurasi langsung dari browser.            </li>
+            <li><b>Fitur Jaringan Lengkap - </b> MikroTik menyediakan berbagai fitur seperti routing (Static, RIP, OSPF, BGP) untuk mengelola lalu lintas jaringan, firewall & keamanan dengan packet filtering dan NAT, VPN untuk koneksi aman, QoS (Quality of Service) untuk mengatur prioritas bandwidth, serta hotspot & radius server untuk autentikasi pengguna di jaringan publik.</li>
+            <li><b>Performa Stabil & Andal - </b> MikroTik dirancang untuk menangani berbagai skala jaringan, mulai dari rumah, kantor, hingga ISP, dengan kestabilan tinggi serta kemampuan menangani banyak koneksi simultan tanpa mengalami penurunan kinerja.            </li>
+            <li><b>Mendukung Berbagai Jenis Koneksi Internet  - </b> MikroTik memiliki komunitas yang sangat besar dan aktif, memungkinkan penggunanya untuk mendapatkan dukungan dan berbagi pengalaman.MikroTik kompatibel dengan berbagai jenis koneksi seperti fiber optic (FTTH/GPON) dari provider seperti Indihome dan Biznet, Wireless ISP (WISP) untuk daerah terpencil, serta modem USB & LTE sebagai cadangan koneksi berbasis seluler.</li>
+            <li><b>Load Balancing & Failover  - </b> MikroTik dapat menggunakan metode ECMP, PCC, atau Nth untuk menggabungkan beberapa koneksi internet, mendistribusikan lalu lintas jaringan, serta memastikan internet tetap berjalan saat salah satu koneksi mengalami gangguan.</li>
+            <li><b>RouterOS Ringan & Optimal  - </b> MikroTik menggunakan sistem operasi RouterOS berbasis Linux yang efisien, memungkinkan perangkat bekerja dengan optimal bahkan pada hardware dengan spesifikasi rendah, serta memiliki berbagai fitur lanjutan untuk jaringan profesional.</li>
+        </ul>
+    </section>
+
+    <section id="kekurangan">
+        <h2 class="moving-text">5. Kekurangan MikroTik</h2>
+        <ul class="moving-text">
+            <li><b>Kurva Belajar yang Cukup Curam - </b> Meskipun memiliki antarmuka grafis (WinBox), konfigurasi MikroTik tetap memerlukan pemahaman tentang jaringan dan protokol, sehingga pemula mungkin kesulitan dalam pengaturan awal dan troubleshooting.</li>
+            <li><b>Tidak Semua Perangkat Mendukung Wireless Standar Terbaru - </b> Beberapa perangkat MikroTik masih menggunakan standar Wi-Fi lama seperti 802.11n, yang kurang optimal dibandingkan router modern dengan Wi-Fi 6 (802.11ax), terutama untuk kebutuhan jaringan nirkabel berkecepatan tinggi.</li>
+            <li><b>Fitur Beberapa Model Dibatasi oleh Lisensi  - </b> MikroTik menggunakan sistem lisensi RouterOS yang membatasi fitur tertentu, seperti jumlah sesi aktif, jumlah interface yang didukung, dan kapasitas throughput maksimal, sehingga pengguna harus membeli lisensi lebih tinggi untuk fitur yang lebih lengkap.</li>
+            <li><b>Kurangnya Dukungan Resmi untuk Pemula - </b> MikroTik lebih mengandalkan komunitas dan dokumentasi online untuk dukungan teknis, sementara dukungan resmi dari MikroTik sendiri biasanya ditujukan untuk pengguna tingkat lanjut atau perusahaan.</li>
+            <li><b>User Interface Kurang Modern - </b> Tampilan antarmuka WinBox dan WebFig cenderung klasik dan tidak seintuitif router komersial lainnya, yang sering kali memiliki tampilan lebih modern dan mudah dipahami oleh pengguna awam.</li>
+            <li><b>Tidak Dilengkapi Fitur Plug-and-Play - </b> Berbeda dengan router komersial yang sering kali memiliki pengaturan otomatis, MikroTik memerlukan konfigurasi manual untuk hampir semua fitur, sehingga pengguna harus memahami konsep jaringan terlebih dahulu sebelum dapat menggunakannya secara optimal.</li>
+            <li><b>Beberapa Model Memiliki Hardware Terbatas - </b> Beberapa perangkat MikroTik menggunakan prosesor dan RAM yang lebih rendah dibandingkan router kelas enterprise lain seperti Cisco atau Juniper, sehingga bisa mengalami keterbatasan performa saat menangani lalu lintas data dalam jumlah besar.</li>
+        </ul>
+    </section>
+
+    <section id="instalasi">
+        <h2 class="moving-text">6. Instalasi MikroTik</h2>
+        <p class="moving-text">Proses instalasi MikroTik cukup mudah dilakukan, baik menggunakan RouterOS maupun perangkat keras RouterBOARD. Berikut adalah langkah dasar instalasi MikroTik:</p>
+        <ol class="moving-text">
+            <li>Unduh RouterOS: Unduh file instalasi RouterOS dari situs resmi MikroTik sesuai dengan perangkat yang digunakan.</li>
+            <li>Persiapkan Media Instalasi: Gunakan USB atau perangkat lain untuk membuat media instalasi.</li>
+            <li>Instalasi RouterOS: Boot perangkat menggunakan media instalasi dan ikuti petunjuk instalasi.</li>
+            <li>Konfigurasi Awal: Setelah instalasi selesai, Anda dapat mengonfigurasi perangkat dengan login ke RouterOS dan melakukan pengaturan dasar seperti pengaturan IP, firewall, dan lainnya.</li>
+        </ol>
+    </section>
+
+    <section id="pengaturan">
+        <h2 class="moving-text">7. Pengaturan Dasar MikroTik</h2>
+        <p class="moving-text">Beberapa pengaturan dasar yang sering dilakukan di MikroTik:</p>
+        <ul class="moving-text">
+            <li>Pengaturan IP Address: Mengonfigurasi alamat IP untuk router dan perangkat lainnya dalam jaringan.</li>
+            <li>Firewall dan Filter: Menetapkan aturan firewall untuk mengontrol lalu lintas yang masuk dan keluar.</li>
+            <li>Pengaturan DHCP: Mengonfigurasi DHCP server untuk memberikan alamat IP secara otomatis kepada perangkat dalam jaringan.</li>
+            <li>Pengaturan VPN: Membuat koneksi VPN untuk akses aman ke jaringan dari lokasi yang jauh.</li>
+        </ul>
+    </section>
+
+    <section id="penggunaan">
+        <h2 class="moving-text">8. Penggunaan MikroTik di Jaringan</h2>
+        <p class="moving-text">MikroTik digunakan di berbagai jenis jaringan, dari jaringan rumah kecil hingga jaringan perusahaan besar. MikroTik sering digunakan untuk:</p>
+        <ul class="moving-text">
+            <li>Jaringan ISP: MikroTik digunakan oleh banyak penyedia layanan internet untuk mengelola dan membatasi lalu lintas data.</li>
+            <li>Jaringan Perusahaan: MikroTik digunakan untuk mengelola jaringan internal, termasuk VPN, firewall, dan pengaturan QoS.</li>
+            <li>Jaringan Rumah: MikroTik juga digunakan oleh pengguna rumah untuk mengelola koneksi internet dan membangun jaringan Wi-Fi pribadi.</li>
+        </ul>
+    </section>
+
+    <section id="komunitas">
+        <h2 class="moving-text">9. Komunitas MikroTik</h2>
+        <p class="moving-text">MikroTik memiliki komunitas yang luas dan aktif, baik secara global maupun di Indonesia, yang membantu pengguna dalam mempelajari, mengonfigurasi, dan menyelesaikan masalah terkait perangkat MikroTik. Berikut adalah beberapa aspek penting dari komunitas MikroTik:
+
+            <b>Forum Resmi MikroTik – </b> MikroTik memiliki forum resmi di forum.mikrotik.com, tempat pengguna dari seluruh dunia berdiskusi tentang konfigurasi, troubleshooting, serta berbagi skrip dan solusi terkait MikroTik.
+            
+            <b>Grup & Forum Lokal – </b> Di Indonesia, terdapat banyak grup diskusi di platform seperti Facebook, Telegram, dan WhatsApp yang membahas topik seputar MikroTik, mulai dari pemula hingga tingkat lanjutan. Beberapa grup terkenal seperti "MikroTik Indonesia" dan "Belajar MikroTik Dari Nol" sangat aktif membantu anggotanya.
+            
+            <b>Training & Sertifikasi MikroTik – </b> MikroTik menyediakan program pelatihan dan sertifikasi resmi seperti MTCNA (MikroTik Certified Network Associate) dan level lanjutan seperti MTCRE, MTCINE, MTCTCE, dll., yang bisa diikuti di berbagai training center atau melalui komunitas yang menyelenggarakan pelatihan bersama.
+            
+            <b>Channel YouTube & Blog Edukasi – </b> Banyak pengguna dan trainer MikroTik membagikan tutorial, studi kasus, dan konfigurasi langkah demi langkah di YouTube dan blog. Beberapa channel YouTube seperti Labkom99, Syams Channel, dan Gus Irawan sering membahas solusi jaringan dengan MikroTik.
+            
+            <b> Event & Gathering MikroTik – </b> MikroTik secara rutin mengadakan acara seperti MikroTik User Meeting (MUM) yang merupakan seminar dan workshop bagi pengguna MikroTik untuk berbagi pengalaman, mendapatkan insight terbaru, serta menjalin networking dengan sesama pengguna dan profesional IT.
+            
+            <b> Dokumentasi & Wiki MikroTik – </b> MikroTik memiliki dokumentasi resmi di wiki.mikrotik.com, yang berisi panduan lengkap mengenai fitur, konfigurasi dasar hingga lanjutan, serta skrip yang dapat digunakan untuk mengotomatisasi pengelolaan jaringan.
+            
+           <b> Marketplace & Jasa Konfigurasi MikroTik – </b> Banyak komunitas yang juga menyediakan layanan pemasangan dan konfigurasi MikroTik bagi pengguna yang kesulitan atau membutuhkan solusi profesional untuk bisnis dan ISP.
+            
+            Dengan komunitas yang aktif, pengguna MikroTik bisa mendapatkan banyak sumber belajar, bantuan, serta peluang untuk meningkatkan keterampilan dalam jaringan dan administrasi sistem. 🚀</p>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function typeEffect(element, speed) {
+                let text = element.getAttribute("data-text"); // Ambil teks dari atribut data-text
+                element.textContent = ""; // Hapus teks asli dulu
+                let i = 0;
+        
+                function type() {
+                    if (i < text.length) {
+                        element.textContent += text.charAt(i);
+                        i++;
+                        setTimeout(type, speed);
+                    } else {
+                        element.classList.remove("typing"); // Hapus class setelah selesai
+                    }
+                }
+                type();
+            }
+        
+            // Ambil semua elemen yang punya class "typing"
+            let elements = document.querySelectorAll(".typing");
+            elements.forEach((element, index) => {
+                element.setAttribute("data-text", element.textContent); // Simpan teks asli
+                setTimeout(() => typeEffect(element, 50), index * 1000);
+            });
+        });
+        </script>
+        
+    
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                let paragraphs = document.querySelectorAll(".moving-text");
+                paragraphs.forEach((p, index) => {
+                    setTimeout(() => {
+                        p.classList.add("show");
+                    }, index * 100); // Delay tiap paragraf biar muncul bertahap
+                });
+            });
+            </script>
+
+<script>
+    function toggleDrawer() {
+      const nav = document.getElementById("drawerNav");
+      nav.classList.toggle("show-drawer");
+    }
+  </script>
+
+<nav class="quiz-nav">
+   
+  </nav>
+  
+            </body>
+            </html>
+
+   

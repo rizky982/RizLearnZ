@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konsep Dasar Pemrograman</title>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="quizC.html" class="quiz-btn">🧠 Kerjakan Quiz</a>
+        </nav>
+        <link rel="stylesheet" href="./hardware.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        nav {
+  display: flex;
+  align-items: center;
+  background-color: #343333;
+  padding: 12px 30px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 16px;
+  margin-right: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+  font-weight: 500;
+}
+
+nav a:hover {
+  background-color: #575757;
+  transform: scale(1.05);
+}
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="menu-toggle" onclick="toggleDrawer()">☰</div>
+        <h1 class="typing"> Cybersecurity </h1>
+    </header>
+
+    <nav id="drawerNav">>
+        <a href="#pendahuluan">Pendahuluan</a>
+        <a href="#sejarah">Sejarah</a>
+        <a href="#Jenis bahasa">Jenis bahasa</a>
+        <a href="#struktur">struktur</a>
+        <a href="#operator program">operator program</a>
+        <a href="#Fungsi dan Modularitas">Fungsi dan Modularitas</a>
+        <a href="#eror handling">eror handling</a>
+        <a href="#input dan output">input dan output</a>
+    
+    </nav>
+
+    <section id="pendahuluan">
+        <h2  class="moving-text">1. Pendahuluan</h2>
+        <p  class="moving-text"> Cybersecurity adalah serangkaian praktik, teknologi, dan kebijakan yang bertujuan untuk melindungi sistem komputer, jaringan, perangkat lunak, serta data dari berbagai ancaman digital yang semakin kompleks dan beragam, seperti malware, ransomware, phishing, serangan siber, peretasan, pencurian data, serta eksploitasi celah keamanan yang dapat menyebabkan kebocoran informasi, kerugian finansial, atau bahkan gangguan terhadap infrastruktur kritis suatu negara; dalam era digital yang semakin maju dan saling terhubung, pentingnya cybersecurity tidak hanya terbatas pada perlindungan individu dari pencurian identitas dan pelanggaran privasi, tetapi juga mencakup keamanan bisnis, organisasi, serta sektor pemerintahan dalam menjaga kerahasiaan, integritas, dan ketersediaan data, terutama dengan semakin maraknya teknologi berbasis cloud, Internet of Things (IoT), serta kecerdasan buatan yang membuka peluang sekaligus risiko baru dalam keamanan siber; oleh karena itu, pemahaman terhadap berbagai jenis ancaman, mulai dari serangan DDoS yang dapat melumpuhkan layanan daring, hingga Advanced Persistent Threats (APT) yang menargetkan jaringan dalam jangka panjang secara diam-diam, menjadi hal yang sangat krusial dalam mengembangkan strategi perlindungan yang efektif, baik melalui penerapan enkripsi, autentikasi berlapis, pemantauan keamanan secara real-time, hingga edukasi dan kesadaran pengguna untuk mencegah terjadinya insiden yang dapat mengancam kestabilan dunia digital secara luas.</p>
+    </section>
+
+    <section id="sejarah">
+        <h2  class="moving-text">2. Jenis-jenis Serangan cyber</h2>
+        <p  class="moving-text">Jenis-jenis Serangan cyber mencakup berbagai ancaman yang dapat membahayakan keamanan digital, seperti phishing, yang memanfaatkan teknik manipulasi untuk mencuri data pribadi melalui email atau situs palsu; malware, yaitu perangkat lunak berbahaya yang dirancang untuk merusak atau mencuri informasi dari sistem; serta ransomware, yang mengenkripsi data korban dan menuntut tebusan agar akses dapat dipulihkan; selain itu, terdapat Man-in-the-Middle (MitM) attack, di mana peretas menyusup di antara komunikasi dua pihak untuk mencuri atau mengubah informasi yang dikirimkan; DDoS (Distributed Denial of Service) attack, yang membanjiri server dengan lalu lintas berlebihan sehingga layanan menjadi tidak dapat diakses oleh pengguna sah; serta berbagai bentuk social engineering, yang mengandalkan manipulasi psikologis untuk mengecoh individu agar memberikan akses atau informasi sensitif, sehingga pemahaman tentang cara kerja dan pencegahan terhadap setiap jenis serangan ini menjadi sangat penting dalam menjaga keamanan siber di era digital yang semakin kompleks dan berisiko.  </p>
+    </section>
+
+    <section id="jenis bahasa">
+        <h2  class="moving-text">3. Keamanan jaringan</h2>
+        <ul  class="moving-text">
+            <p> Keamanan Jaringan membahas konsep dasar jaringan dan langkah-langkah perlindungan yang bertujuan untuk mencegah akses tidak sah serta menjaga integritas dan kerahasiaan data, dimulai dari dasar-dasar jaringan, yang mencakup cara perangkat saling terhubung dan bagaimana data dikirim melalui berbagai protokol komunikasi, hingga penerapan keamanan jaringan untuk melindungi sistem dari ancaman eksternal maupun internal; salah satu metode utama yang digunakan adalah firewall, yang berfungsi sebagai penyaring lalu lintas jaringan berdasarkan aturan keamanan tertentu guna mencegah akses berbahaya, serta Intrusion Detection System (IDS), yang mendeteksi dan memberi peringatan dini jika ada aktivitas mencurigakan dalam jaringan; selain itu, penggunaan Virtual Private Network (VPN) menjadi solusi penting dalam menjaga privasi dan keamanan data dengan mengenkripsi koneksi internet, sehingga informasi yang dikirim tetap aman dari penyadapan, terutama ketika menggunakan jaringan publik; dengan meningkatnya ancaman siber yang menyasar jaringan perusahaan maupun individu, pemahaman tentang teknologi dan strategi perlindungan ini menjadi krusial untuk memastikan konektivitas yang aman di dunia digital. </p>
+        </ul>
+    </section>
+
+    <section id="struktur">
+        <h2  class="moving-text">4. Keamanan Perangkat </h2>
+        <ul  class="moving-text">
+            <h4>A. Keamanan di Windows, macOS, dan Linux</h4>
+            <p>Keamanan sistem operasi adalah aspek krusial dalam menjaga integritas, kerahasiaan, dan ketersediaan data serta sistem. Setiap sistem operasi memiliki fitur keamanan yang berbeda, namun pada dasarnya bertujuan untuk melindungi pengguna dari ancaman seperti malware, serangan siber, dan eksploitasi sistem.</p>
+            <h4>B. Keamanan di Windows</h4>
+            <p>Windows adalah sistem operasi yang paling banyak digunakan dan menjadi target utama bagi malware dan serangan siber. Beberapa fitur keamanannya meliputi:</p>
+            <li><b> Windows Defender:</b>  Antivirus bawaan untuk melindungi dari malware dan ancaman lainnya.</li>
+            <li><b> Windows Firewall:</b>  Menyaring lalu lintas jaringan untuk mencegah akses yang tidak sah.</li>
+            <li><b> BitLocker:</b> Enkripsi disk penuh untuk melindungi data pengguna.            </li>
+            <li><b> User Account Control (UAC): </b> Membatasi hak akses aplikasi agar tidak dapat mengubah sistem tanpa izin pengguna.            </li>
+            <h4>C. Keamanan di macOS</h4>
+            <p>macOS dikenal memiliki sistem keamanan yang kuat dengan berbagai fitur bawaan, seperti: </p>
+            <li><b>Gatekeeper:</b> Mencegah instalasi aplikasi dari sumber yang tidak terpercaya.</li>
+            <li><b>Sandboxing:</b> Membatasi aplikasi agar tidak dapat mengakses sistem yang tidak diperlukan.</li>
+            <li><b>Security & Privacy Settings:</b> Kontrol izin aplikasi terhadap data pribadi.</li>
+            <h4>Keamanan di Linux, Patch dan Update Sistem, serta Hardening Sistem Operasi</h4>
+            <p>Linux sering digunakan dalam lingkungan server dan sistem yang membutuhkan tingkat keamanan tinggi dengan fitur keamanan seperti hak akses dan izin file untuk mengatur siapa yang dapat membaca, menulis, atau mengeksekusi file; SELinux & AppArmor sebagai sistem keamanan tambahan untuk membatasi akses aplikasi terhadap sistem; firewall (iptables, ufw, firewalld) untuk melindungi sistem dari serangan jaringan; sudo & least privilege untuk mencegah pengguna menjalankan perintah berbahaya tanpa izin administrator; serta kernel hardening yang mengaktifkan fitur keamanan di tingkat kernel untuk mencegah eksploitasi. Selain itu, pembaruan sistem operasi sangat penting untuk menjaga keamanan perangkat melalui patch dan update yang memperbaiki celah keamanan, meningkatkan stabilitas sistem, memperbaiki bug, serta menambah fitur keamanan baru. Jenis patch meliputi security updates untuk mengatasi masalah keamanan, feature updates yang menyertakan fitur baru, cumulative updates sebagai gabungan beberapa update sebelumnya, dan emergency patches yang dirilis segera setelah ditemukan ancaman keamanan serius. Dalam praktik terbaiknya, disarankan untuk mengaktifkan pembaruan otomatis, menggunakan versi sistem operasi yang masih didukung, menguji update sebelum diterapkan di lingkungan produksi, serta melakukan backup data sebelum pembaruan besar. Hardening sistem operasi dilakukan dengan menonaktifkan layanan yang tidak perlu, menggunakan akun dengan hak akses minimal, menerapkan kebijakan kata sandi yang kuat, mengenkripsi data penting, mengonfigurasi firewall, menggunakan VPN, memantau lalu lintas jaringan, hanya menginstal software dari sumber tepercaya, menerapkan prinsip sandboxing, serta mengaktifkan logging keamanan, menggunakan SIEM (Security Information and Event Management), dan melakukan audit keamanan secara rutin untuk mendeteksi kelemahan dalam sistem. Dengan menerapkan langkah-langkah ini, keamanan perangkat dan sistem operasi dapat ditingkatkan secara signifikan, mengurangi risiko serangan siber dan kebocoran data.</p>
+
+    </section>
+
+    <section id="operator program">
+        <h2  class="moving-text">5.  Kriptografi dan Enkripsi Data</h2>
+        <ul  class="moving-text">
+            <p>Kriptografi dan Enkripsi Data membahas bagaimana teknik pengamanan informasi digunakan untuk menjaga kerahasiaan, integritas, dan autentikasi data dalam komunikasi digital, dimulai dari prinsip dasar kriptografi, yang melibatkan proses penyandian (enkripsi) dan pemulihan informasi (dekripsi) agar hanya pihak yang berwenang dapat mengaksesnya; terdapat berbagai jenis enkripsi yang digunakan untuk mengamankan data, seperti Advanced Encryption Standard (AES) yang terkenal karena kecepatannya dalam mengenkripsi data dalam blok, serta Rivest-Shamir-Adleman (RSA) yang berbasis pada kriptografi kunci publik dan banyak digunakan dalam pengamanan transaksi online; selain itu, penerapan enkripsi dalam komunikasi menjadi aspek penting dalam menjaga keamanan pesan, baik dalam pengiriman email, komunikasi aplikasi perpesanan, transaksi perbankan online, hingga perlindungan data pengguna dalam berbagai layanan digital, di mana teknik seperti end-to-end encryption memastikan bahwa hanya pengirim dan penerima yang dapat membaca pesan tanpa intervensi pihak ketiga, menjadikan enkripsi sebagai salah satu fondasi utama dalam dunia keamanan siber modern.  </p>
+        </ul>
+    </section>
+
+    <section id="Fungsi dan Modularitas">
+        <h2  class="moving-text">6. Keamanan Web dan Aplikasi :</h2>
+        <ul  class="moving-text">
+           <p> Keamanan Web dan Aplikasi membahas berbagai ancaman serta strategi perlindungan terhadap aplikasi web yang rentan terhadap eksploitasi siber, dimulai dari serangan terhadap aplikasi web, seperti SQL Injection, di mana penyerang menyisipkan kode SQL berbahaya untuk mengakses atau memodifikasi database secara ilegal, serta Cross-Site Scripting (XSS), yang memungkinkan peretas menyuntikkan skrip berbahaya ke dalam halaman web untuk mencuri data pengguna atau mengendalikan sesi mereka; untuk mencegah serangan semacam ini, diperlukan penerapan secure coding dan best practice keamanan aplikasi, yang mencakup teknik pengembangan perangkat lunak yang aman, seperti validasi input yang ketat, penggunaan mekanisme autentikasi yang kuat, serta enkripsi data yang sensitif guna mencegah eksploitasi celah keamanan; selain itu, perlindungan tambahan dapat diperoleh melalui Web Application Firewall (WAF), yang berfungsi sebagai perisai antara aplikasi web dan pengguna dengan menyaring serta memblokir lalu lintas mencurigakan berdasarkan aturan keamanan yang telah ditetapkan, sehingga mengurangi risiko serangan yang dapat membahayakan data dan sistem, menjadikan keamanan web sebagai aspek penting dalam pengembangan dan operasional aplikasi digital di era modern.           </p>
+</ul>
+    </section>
+
+    <section id="eror handling">
+        <h2  class="moving-text">7. Manajemen Identitas, Akses, dan Hukum Cybersecurity </h2>
+        <p  class="moving-text">Manajemen Identitas, Akses, dan Hukum Cybersecurity membahas bagaimana sistem keamanan digital dirancang untuk memastikan bahwa hanya pengguna yang berwenang dapat mengakses data dan sistem, serta bagaimana regulasi dan etika dalam dunia siber berperan dalam menjaga keamanan dan kepatuhan hukum; salah satu aspek penting dalam bab ini adalah sistem manajemen identitas dan akses (IAM), yang memungkinkan organisasi untuk mengelola hak akses pengguna berdasarkan peran dan kebutuhan mereka guna mencegah akses tidak sah; penerapan Multi-Factor Authentication (MFA) menjadi langkah penting dalam meningkatkan keamanan dengan mengharuskan pengguna untuk memverifikasi identitas mereka melalui lebih dari satu metode autentikasi, seperti kata sandi, kode OTP, atau biometrik; selain itu, manajemen kata sandi yang aman sangat krusial dalam mencegah peretasan akun, dengan penggunaan teknik seperti pembuatan kata sandi yang kuat, rotasi berkala, serta pemanfaatan password manager untuk menyimpan kredensial dengan aman; di sisi hukum, peraturan dan hukum terkait cybersecurity di berbagai negara berperan dalam menetapkan standar keamanan dan perlindungan data, di mana undang-undang seperti Computer Fraud and Abuse Act (CFAA) di Amerika Serikat dan regulasi lain di berbagai negara bertujuan untuk menangani kejahatan siber serta memberikan dasar hukum bagi penegakan aturan di dunia digital; selain itu, bab ini juga membahas etika hacking, yang membedakan antara White Hat hackers, yang bekerja untuk mengamankan sistem dan mendeteksi celah keamanan secara etis, serta Black Hat hackers, yang mengeksploitasi kelemahan sistem untuk tujuan jahat, sehingga pemahaman tentang aspek teknis, hukum, dan etika dalam cybersecurity menjadi kunci dalam menciptakan ekosistem digital yang lebih aman dan terpercaya.        </p>
+        <ol>
+        </ol>
+    </section>
+
+    <section id="input dan output">
+        <h2  class="moving-text">8. Penetration Testing, Ethical Hacking, dan Masa Depan Cybersecurity </h2>
+        <p  class="moving-text">Penetration Testing, Ethical Hacking, dan Masa Depan Cybersecurity membahas bagaimana metode pengujian keamanan digunakan untuk mengidentifikasi celah dalam sistem, serta bagaimana perkembangan teknologi memengaruhi lanskap cybersecurity di masa depan; salah satu aspek utama dalam bab ini adalah penetration testing (pentest), sebuah proses simulasi serangan terhadap sistem untuk menemukan kelemahan sebelum dieksploitasi oleh pihak tidak bertanggung jawab, yang dilakukan melalui berbagai teknik dasar, seperti pengintaian (reconnaissance), eksploitasi celah keamanan, dan eskalasi hak akses; dalam praktik ethical hacking, terdapat berbagai tools yang digunakan, seperti Metasploit untuk pengujian eksploitasi, Kali Linux sebagai sistem operasi khusus bagi para pentester dengan berbagai alat bawaan, serta Wireshark, yang digunakan untuk menganalisis lalu lintas jaringan guna mendeteksi aktivitas mencurigakan; bab ini juga menguraikan proses dan langkah-langkah dalam ethical hacking, yang mencakup perencanaan, pemindaian, eksploitasi, pelaporan hasil, serta mitigasi risiko untuk meningkatkan keamanan sistem secara berkelanjutan; seiring berkembangnya teknologi, tren cybersecurity di masa depan akan semakin dipengaruhi oleh ancaman baru dan solusi inovatif, di mana peran AI dan machine learning dalam keamanan siber menjadi semakin krusial dalam mendeteksi ancaman secara otomatis, menganalisis pola serangan, serta meningkatkan respons terhadap insiden siber secara real-time; selain itu, bagi individu yang tertarik terjun ke dunia keamanan siber, bab ini juga membahas cara memulai dan membangun karir di dunia cybersecurity, termasuk keterampilan yang diperlukan, sertifikasi seperti CEH (Certified Ethical Hacker) dan CISSP (Certified Information Systems Security Professional), serta peluang kerja dalam berbagai bidang, mulai dari analis keamanan hingga spesialis forensik digital, menjadikan cybersecurity sebagai salah satu karir yang penuh tantangan dan memiliki prospek cerah di masa depan.</p>
+        
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function typeEffect(element, speed) {
+                let text = element.getAttribute("data-text"); // Ambil teks dari atribut data-text
+                element.textContent = ""; // Hapus teks asli dulu
+                let i = 0;
+        
+                function type() {
+                    if (i < text.length) {
+                        element.textContent += text.charAt(i);
+                        i++;
+                        setTimeout(type, speed);
+                    } else {
+                        element.classList.remove("typing"); // Hapus class setelah selesai
+                    }
+                }
+                type();
+            }
+        
+            // Ambil semua elemen yang punya class "typing"
+            let elements = document.querySelectorAll(".typing");
+            elements.forEach((element, index) => {
+                element.setAttribute("data-text", element.textContent); // Simpan teks asli
+                setTimeout(() => typeEffect(element, 50), index * 1000);
+            });
+        });
+        </script>
+        
+    
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                let paragraphs = document.querySelectorAll(".moving-text");
+                paragraphs.forEach((p, index) => {
+                    setTimeout(() => {
+                        p.classList.add("show");
+                    }, index * 100); // Delay tiap paragraf biar muncul bertahap
+                });
+            });
+            </script>
+
+<script>
+    function toggleDrawer() {
+      const nav = document.getElementById("drawerNav");
+      nav.classList.toggle("show-drawer");
+    }
+  </script>
+
+<nav class="quiz-nav">
+  </nav>
+             </body>
+             </html>

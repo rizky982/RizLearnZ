@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konsep Dasar Pemrograman</title>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="quizP.html" class="quiz-btn">🧠 Kerjakan Quiz</a>
+        </nav>
+        <link rel="stylesheet" href="./hardware.css">
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        nav {
+  display: flex;
+  align-items: center;
+  background-color: #343333;
+  padding: 12px 30px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 16px;
+  margin-right: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+  font-weight: 500;
+}
+
+nav a:hover {
+  background-color: #575757;
+  transform: scale(1.05);
+}
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="menu-toggle" onclick="toggleDrawer()">☰</div>
+        <h1 class="typing">Konsep Dasar Pemrograman</h1>
+    </header>
+
+    <nav id="drawerNav">>
+        <a href="#pendahuluan">Pendahuluan</a>
+        <a href="#sejarah">Sejarah</a>
+        <a href="#Jenis bahasa">Jenis bahasa</a>
+        <a href="#struktur">struktur</a>
+        <a href="#operator program">operator program</a>
+        <a href="#Fungsi dan Modularitas">Fungsi dan Modularitas</a>
+        <a href="#eror handling">eror handling</a>
+        <a href="#input dan output">input dan output</a>
+    
+    </nav>
+
+    <section id="pendahuluan">
+        <h2 class="moving-text">1. Pendahuluan</h2>
+        <p class="moving-text">Pemrograman adalah proses menulis, mengembangkan, dan menjalankan kode untuk memberikan instruksi kepada komputer agar melakukan tugas tertentu. Dalam dunia teknologi, pemrograman menjadi keterampilan penting yang digunakan untuk mengembangkan perangkat lunak, aplikasi web, sistem operasi, hingga kecerdasan buatan.
+
+            Pemrograman dasar mengajarkan konsep fundamental seperti variabel, tipe data, percabangan, perulangan, dan algoritma, yang menjadi fondasi dalam membangun sebuah program. Dengan memahami dasar-dasar pemrograman, seseorang dapat mengembangkan solusi berbasis teknologi secara lebih efisien dan terstruktur.
+            
+            Materi ini bertujuan untuk mengenalkan konsep pemrograman secara sederhana dan sistematis, sehingga pemula dapat memahami logika pemrograman dan mulai menulis kode dengan bahasa pemrograman pilihan mereka, seperti Python, C, atau Java. 🚀</p>
+    </section>
+
+    <section id="sejarah">
+        <h2  class="moving-text">2. Sejarah</h2>
+        <p  class="moving-text">Sejarah pemrograman dimulai dari konsep algoritma pertama yang ditulis oleh Ada Lovelace pada abad ke-19, berkembang ke kode mesin dan bahasa Assembly di era komputer awal, lalu muncul bahasa tingkat tinggi seperti FORTRAN, COBOL, dan C yang mempermudah pengembangan perangkat lunak, hingga akhirnya berkembang ke pemrograman berbasis objek seperti Java dan Python, serta teknologi modern seperti web development, kecerdasan buatan (AI), cloud computing, dan Internet of Things (IoT) yang semakin mendominasi dunia teknologi.        </p>
+    </section>
+
+    <section id="jenis bahasa">
+        <h2  class="moving-text">3. Jenis Bahasa pemrograman</h2>
+        <ul  class="moving-text">
+            <p> Jenis-Jenis Bahasa Pemrograman adalah dasar dalam memahami bagaimana komputer menjalankan instruksi dengan berbagai bahasa pemrograman yang dibagi berdasarkan tingkatannya, yaitu bahasa tingkat rendah seperti Assembly dan Machine Code yang cepat tetapi sulit dipahami manusia, serta bahasa tingkat tinggi seperti Python, Java, dan C++ yang lebih mudah digunakan meskipun membutuhkan proses penerjemahan, serta berdasarkan paradigmannya, seperti pemrograman prosedural yang berfokus pada langkah-langkah instruksi (C, Pascal), pemrograman berorientasi objek (OOP) yang menggunakan konsep objek dengan atribut dan metode (Java, Python, C++), pemrograman fungsional yang menekankan penggunaan fungsi dalam pemrosesan data (Haskell, JavaScript), dan pemrograman deklaratif yang menyatakan logika tanpa menentukan langkah-langkah spesifik (SQL, Prolog) untuk berbagai keperluan seperti web development, game development, dan kecerdasan buatan. </p>
+            <p><b>Struktur Dasar Pemrograman dan Konsep Fundamental</b> mencakup elemen penting dalam menulis kode seperti variabel dan tipe data untuk menyimpan informasi dalam bentuk angka, teks, dan objek, operator untuk melakukan operasi matematika dan logika, percabangan (if-else, switch-case) untuk pengambilan keputusan berdasarkan kondisi tertentu, perulangan (for, while, do-while) untuk menjalankan instruksi secara berulang, serta fungsi dan modularitas yang membagi kode menjadi bagian lebih kecil agar lebih rapi, efisien, dan mudah digunakan kembali dalam pemrograman.</p>
+            <p> <b>Penerapan Pemrograman dan Pengembangan Proyek Sederhana </b>bertujuan untuk mengaplikasikan konsep dasar dengan membuat program yang mampu berinteraksi dengan pengguna melalui input dan output, menangani kesalahan menggunakan error handling dan debugging, serta mengimplementasikan konsep dalam proyek kecil seperti kalkulator, to-do list, pengolah teks, atau permainan sederhana, yang menjadi dasar dalam mengembangkan aplikasi lebih kompleks dengan pemrograman. 🚀</p>
+        </ul>
+    </section>
+
+    <section id="struktur">
+        <h2 class="moving-text">4. Struktur Dasar Pemrograman</h2>
+        <ul class="moving-text">
+            <p>Struktur dasar pemrograman adalah elemen fundamental yang membentuk suatu program agar dapat berjalan dengan baik dan mudah dibaca. Setiap bahasa pemrograman memiliki sintaks yang berbeda, tetapi konsep dasarnya tetap sama. Berikut adalah beberapa aspek utama dalam struktur dasar pemrograman:</p>
+            <li><b> Sintaks Pemrograman</b> adalah aturan penulisan kode yang harus diikuti agar program dapat berjalan dengan benar, di mana setiap bahasa memiliki sintaks berbeda, seperti Python yang menggunakan indentasi untuk blok kode, sedangkan C, Java, dan JavaScript menggunakan kurung kurawal {}.</li>
+            <li><b> Statement dan Ekspresi</b> merupakan perintah yang dieksekusi oleh komputer, di mana statement adalah instruksi lengkap seperti deklarasi variabel atau perulangan, sedangkan ekspresi adalah kombinasi nilai dan operator yang menghasilkan nilai baru, seperti x = 5 + 3.</li>
+            <li><b> Variabel dan Tipe Data</b> digunakan untuk menyimpan data dalam program, di mana variabel berfungsi sebagai wadah penyimpanan nilai, sedangkan tipe data menentukan jenis nilai yang dapat disimpan, seperti integer, float, string, boolean, list, dan dictionary.</li>
+            <li><b> Operator</b> digunakan untuk melakukan operasi pada nilai dan variabel, termasuk operator aritmatika (+, -, *, /), operator logika (and, or, not), dan operator perbandingan (==, !=, >, <).</li>
+            <li><b> Struktur Kendali (Percabangan dan Perulangan)</b> memungkinkan program mengambil keputusan dan menjalankan perintah berulang kali, seperti if-else untuk percabangan logika serta for dan while untuk perulangan dalam eksekusi kode.</li>
+            <li><b> Fungsi dan Modularitas</b> memungkinkan kode lebih terstruktur dan dapat digunakan kembali dengan mendefinisikan blok kode yang memiliki tugas tertentu, seperti pada Python yang menggunakan def untuk mendeklarasikan fungsi, sehingga program menjadi lebih rapi, efisien, dan mudah dikelola.</li>
+            <li><b> Struktur Data Dasar</b> meliputi penggunaan list, tuple, set, dan dictionary untuk menyimpan dan mengelola data dalam program, di mana list digunakan untuk menyimpan kumpulan nilai, sedangkan dictionary menyimpan pasangan kunci-nilai.</li>
+            <li><b> Komentar dalam Kode</b> digunakan untuk memberikan penjelasan dalam kode agar lebih mudah dipahami oleh programmer lain atau saat revisi, dengan penggunaan tanda # dalam Python atau // dalam C, Java, dan JavaScript.</li>
+            <li><b>Input dan Output (I/O)</b> memungkinkan interaksi antara pengguna dan program, di mana input memungkinkan pengguna memasukkan data melalui keyboard, sedangkan output digunakan untuk menampilkan hasil di layar atau menyimpan data ke file.</li>
+            <li><b>Error Handling dan Debugging</b> membantu menangani kesalahan dalam program agar tidak menyebabkan crash, di mana teknik seperti try-except dalam Python atau try-catch dalam Java dan C++ digunakan untuk menangkap dan menangani error dengan baik.</li>
+    </section>
+
+    <section id="operator program">
+        <h2  class="moving-text">5.  Dasar-Dasar Variabel, Tipe Data, dan Operator</h2>
+        <ul  class="moving-text">
+            <h4>1. Pengertian Variabel </h4>
+            <p>Variabel adalah sebuah nama yang diberikan untuk menyimpan suatu nilai dalam program dan nilai yang disimpan dalam variabel dapat berubah sepanjang eksekusi program, sehingga memungkinkan kita untuk menyimpan, mengambil, dan memodifikasi data dengan mudah. Dalam kebanyakan bahasa pemrograman, variabel memiliki aturan penamaan tertentu seperti harus diawali dengan huruf atau underscore, tidak boleh menggunakan spasi atau karakter khusus selain underscore, harus unik dalam lingkupnya, dan tidak boleh menggunakan kata kunci yang sudah ada dalam bahasa pemrograman tersebut.</p>
+            <li>Deklarasi, Inisialisasi, Cakupan, Perubahan, dan Perbedaan Mutable dan Immutable</li>
+            <p>Deklarasi variabel adalah proses mendefinisikan sebuah variabel sebelum digunakan, sedangkan inisialisasi adalah pemberian nilai awal pada variabel yang dapat langsung diberikan saat deklarasi atau diubah nilainya nanti, di mana dalam beberapa bahasa pemrograman seperti Python deklarasi variabel tidak membutuhkan tipe data secara eksplisit, sementara dalam JavaScript variabel dapat dideklarasikan menggunakan var, let, atau const tergantung kebutuhan, dan dalam bahasa Java, tipe data harus ditentukan saat deklarasi variabel. Variabel juga memiliki cakupan tertentu yang menentukan di mana variabel tersebut dapat diakses dan digunakan, yang terdiri dari variabel global yang dapat diakses dari mana saja dalam program karena dideklarasikan di luar fungsi atau blok kode tertentu, variabel lokal yang hanya dapat diakses di dalam fungsi atau blok kode tempat variabel tersebut dideklarasikan, serta variabel konstanta yang nilainya tidak boleh diubah setelah dideklarasikan dan biasanya ditulis dengan huruf kapital untuk membedakannya dari variabel biasa. Selain itu, variabel yang sudah dideklarasikan dapat diubah nilainya dengan memberikan nilai baru dan dalam beberapa bahasa pemrograman variabel juga bisa dihapus untuk menghemat penggunaan memori, seperti dalam Python di mana variabel dapat dihapus menggunakan perintah del, yang menghilangkan variabel dari memori dan membuatnya tidak dapat diakses lagi dalam program, sedangkan dalam JavaScript dan Java meskipun variabel dapat diubah nilainya, konstanta yang dideklarasikan menggunakan const di JavaScript atau final di Java tidak dapat diubah setelah diberikan nilai pertama kali. Dalam beberapa bahasa pemrograman seperti Python, ada juga konsep mutable dan immutable yang membedakan apakah sebuah variabel dapat diubah setelah dideklarasikan atau tidak, di mana mutable berarti nilai dalam variabel dapat diubah setelah deklarasi seperti dalam list atau dictionary, sedangkan immutable berarti nilai dalam variabel tidak dapat diubah setelah dideklarasikan seperti dalam string atau tuple, sehingga memahami konsep ini sangat penting dalam pengelolaan data karena dapat mempengaruhi efisiensi dan keamanan program.</p>
+          <br>
+          <h4>2. Tipe Data dalam Pemrograman</h4>
+          <p>Tipe data adalah klasifikasi dari data yang digunakan dalam pemrograman untuk menentukan bagaimana komputer akan menyimpan dan mengelola data tersebut, di mana tipe data dapat dibagi menjadi beberapa kategori utama seperti tipe data numerik yang mencakup integer atau bilangan bulat yang digunakan untuk menyimpan angka tanpa desimal serta float atau bilangan pecahan yang digunakan untuk menyimpan angka dengan desimal, tipe data karakter atau string yang digunakan untuk menyimpan teks yang terdiri dari satu atau lebih karakter, tipe data boolean yang hanya memiliki dua nilai yaitu true atau false, serta tipe data kompleks seperti array, list, tuple, dictionary, dan object yang digunakan untuk menyimpan sekumpulan nilai dalam satu entitas. Dalam bahasa pemrograman tertentu seperti Java dan C++, tipe data harus ditentukan secara eksplisit saat deklarasi variabel, sementara dalam bahasa pemrograman seperti Python dan JavaScript, tipe data dapat dikenali secara otomatis berdasarkan nilai yang diberikan ke variabel. Pemahaman tentang tipe data sangat penting karena berpengaruh pada penggunaan memori dan efisiensi eksekusi program, di mana pemilihan tipe data yang tepat dapat meningkatkan kinerja dan keandalan program dalam mengolah data.</p>
+        <br>
+        <h4>3. Operator dalam Pemrograman</h4>
+        <p>Operator adalah simbol atau karakter khusus yang digunakan untuk melakukan operasi pada satu atau lebih operand dalam suatu ekspresi, di mana operator dapat dikategorikan ke dalam beberapa jenis utama seperti operator aritmatika yang digunakan untuk melakukan operasi matematika seperti penjumlahan, pengurangan, perkalian, pembagian, dan modulus, operator perbandingan yang digunakan untuk membandingkan dua nilai dan menghasilkan nilai boolean true atau false seperti ==, !=, >, <, >=, dan <=, operator logika yang digunakan untuk melakukan operasi logika seperti AND, OR, dan NOT yang sering digunakan dalam percabangan dan pengambilan keputusan, operator bitwise yang bekerja pada level bit seperti &, |, ^, dan ~, operator assignment yang digunakan untuk memberikan nilai ke variabel seperti =, +=, -=, *=, /=, dan %=, serta operator ternary yang merupakan operator kondisional singkat yang digunakan untuk menggantikan pernyataan if-else sederhana dalam beberapa bahasa pemrograman. Pemahaman yang baik mengenai operator sangat penting dalam pemrograman karena memungkinkan kita untuk melakukan manipulasi data dan pengambilan keputusan dengan lebih efisien dalam kode program.</p>
+        </ul>
+    </section>
+
+    <section id="Fungsi dan Modularitas">
+        <h2  class="moving-text">6. Fungsi dan Modularitas dalam Pemrograman :</h2>
+        <ul  class="moving-text">
+            <p>Fungsi adalah blok kode yang dirancang untuk melakukan tugas tertentu dan dapat dipanggil berulang kali di dalam program. Dengan menggunakan fungsi, kode menjadi lebih rapi, mudah dipelihara, dan dapat digunakan kembali tanpa harus menuliskan ulang bagian kode yang sama.
+
+                Modularitas dalam pemrograman mengacu pada pembagian program menjadi bagian-bagian kecil yang terpisah tetapi tetap dapat bekerja sama. Dengan menggunakan fungsi, program menjadi lebih terstruktur dan lebih mudah untuk diuji serta dikembangkan</p>
+            <p>Penggunaan fungsi dalam pemrograman memiliki berbagai manfaat, antara lain membuat kode lebih rapi dan mudah dibaca karena setiap fungsi memiliki tugas yang spesifik, mengurangi duplikasi kode sehingga tidak perlu menulis ulang kode yang sama di beberapa tempat, memudahkan debugging dan pemeliharaan karena kesalahan dapat ditemukan lebih cepat dalam blok kode yang lebih kecil, serta dapat digunakan kembali sehingga fungsi yang sudah dibuat bisa dipakai di bagian lain dari program atau proyek yang berbeda.
+
+                Fungsi dalam berbagai bahasa pemrograman umumnya memiliki struktur dasar yang terdiri dari deklarasi fungsi, yaitu penulisan nama fungsi beserta parameter yang diperlukan, blok kode fungsi yang berisi perintah yang akan dieksekusi saat fungsi dipanggil, dan pemanggilan fungsi, yaitu saat fungsi tersebut digunakan dalam program. Sebagai contoh, jika kita ingin membuat fungsi untuk menghitung luas persegi panjang dengan menerima panjang dan lebar sebagai parameter, kita dapat mendefinisikan fungsi seperti berikut:
+                
+                """
+                Membuat fungsi yang menerima dua parameter, panjang dan lebar, lalu mengembalikan hasil perkalian keduanya sebagai luas persegi panjang.
+                """
+                
+                Ada beberapa jenis fungsi yang umum digunakan dalam pemrograman, seperti fungsi dengan parameter yang memungkinkan fleksibilitas lebih tinggi, misalnya fungsi untuk menjumlahkan dua angka, fungsi dengan nilai kembali (return) yang memungkinkan hasil fungsi digunakan di bagian lain dari program seperti fungsi yang menghitung luas lingkaran berdasarkan jari-jari yang diberikan, serta fungsi tanpa nilai kembali (void) yang hanya menjalankan tugas tertentu tanpa mengembalikan nilai seperti mencetak teks ke layar.
+                
+                Dalam program yang kompleks, modularitas sangat penting karena dengan membagi kode ke dalam beberapa fungsi yang berbeda, kita dapat menyederhanakan logika utama dalam program, memisahkan tugas-tugas spesifik agar mudah dimodifikasi tanpa mengganggu bagian lain, serta mengorganisasi kode dengan lebih baik, terutama dalam proyek besar.</p>
+</ul>
+    </section>
+
+    <section id="eror handling">
+        <h2  class="moving-text">7. Error Handling dan Debugging dalam Pemrograman</h2>
+        <p  class="moving-text">Dalam pemrograman, kesalahan atau error adalah hal yang tidak bisa dihindari. Oleh karena itu, penting untuk memahami cara menangani error agar program tetap berjalan dengan baik. Error Handling adalah proses menangani kesalahan yang terjadi saat program dijalankan agar tidak menyebabkan crash. Sedangkan Debugging adalah teknik untuk menemukan dan memperbaiki bug dalam kode agar program berfungsi sebagaimana mestinya.</p>
+        <ol  class="moving-text">
+            <li><p>Secara umum, error dalam pemrograman dapat dikategorikan menjadi beberapa jenis, yaitu syntax error yang terjadi karena penulisan kode yang tidak sesuai dengan aturan bahasa pemrograman seperti lupa menutup tanda kurung atau titik koma, runtime error yang muncul saat program berjalan seperti pembagian dengan nol atau mengakses indeks di luar batas array, serta logical error yang merupakan kesalahan dalam logika program yang membuat hasil yang didapatkan tidak sesuai dengan yang diharapkan meskipun tidak ada pesan error yang muncul.</p></li>
+            <li>Teknik Menangani Error dan Debugging
+
+                Untuk mencegah error menghentikan program secara tiba-tiba dan memperbaiki bug dalam kode, ada beberapa teknik yang dapat digunakan, seperti Try-Catch (Exception Handling) yang merupakan mekanisme untuk menangkap dan menangani error tanpa menyebabkan program berhenti secara mendadak, validasi input untuk memastikan data yang masuk sudah sesuai sebelum diproses, serta logging error untuk mencatat kesalahan yang terjadi agar dapat dianalisis lebih lanjut. Selain itu, debugging juga dapat dilakukan dengan teknik seperti print debugging menggunakan perintah print atau console.log untuk menampilkan nilai variabel di titik-titik tertentu, menggunakan debugger pada IDE atau editor kode untuk menjalankan kode secara step-by-step, membaca pesan error yang muncul untuk memahami penyebab kesalahan, serta menerapkan unit testing untuk memastikan bahwa fungsi atau modul dalam program bekerja dengan benar.</li>
+        </ol>
+    </section>
+
+    <section id="input dan output">
+        <h2  class="moving-text">8. Interaksi Input dan Output dalam Pemrograman</h2>
+        <p  class="moving-text">Dalam pemrograman, input adalah data yang diterima oleh program dari pengguna atau sumber lain, sedangkan output adalah hasil yang ditampilkan oleh program kepada pengguna atau disimpan dalam suatu file. Interaksi input dan output sangat penting karena memungkinkan program berkomunikasi dengan pengguna dan memproses data sesuai kebutuhan</p>
+        <ul  class="moving-text">
+            <p>Input dapat diperoleh melalui berbagai cara, seperti dari pengguna melalui keyboard menggunakan fungsi khusus dalam masing-masing bahasa pemrograman seperti input() dalam Python, cin dalam C++, atau Scanner dalam Java, dari file dengan membaca data menggunakan fungsi seperti open() dalam Python, ifstream dalam C++, atau BufferedReader dalam Java, serta dari argumen baris perintah menggunakan modul sys dalam Python, argv dalam C++, atau args dalam Java, sementara output dapat ditampilkan ke layar dengan perintah seperti print() dalam Python, cout dalam C++, atau System.out.println() dalam Java, maupun disimpan ke dalam file dengan metode seperti open() dalam Python, ofstream dalam C++, atau FileWriter dalam Java.</p>
+        </ul>
+        <p  class="moving-text">Selain APT, dpkg juga digunakan untuk mengelola paket-paket individu yang telah diunduh.</p>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function typeEffect(element, speed) {
+                let text = element.getAttribute("data-text"); // Ambil teks dari atribut data-text
+                element.textContent = ""; // Hapus teks asli dulu
+                let i = 0;
+        
+                function type() {
+                    if (i < text.length) {
+                        element.textContent += text.charAt(i);
+                        i++;
+                        setTimeout(type, speed);
+                    } else {
+                        element.classList.remove("typing"); // Hapus class setelah selesai
+                    }
+                }
+                type();
+            }
+        
+            // Ambil semua elemen yang punya class "typing"
+            let elements = document.querySelectorAll(".typing");
+            elements.forEach((element, index) => {
+                element.setAttribute("data-text", element.textContent); // Simpan teks asli
+                setTimeout(() => typeEffect(element, 50), index * 1000);
+            });
+        });
+        </script>
+        
+    
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                let paragraphs = document.querySelectorAll(".moving-text");
+                paragraphs.forEach((p, index) => {
+                    setTimeout(() => {
+                        p.classList.add("show");
+                    }, index * 100); // Delay tiap paragraf biar muncul bertahap
+                });
+            });
+            </script>
+
+<script>
+    function toggleDrawer() {
+      const nav = document.getElementById("drawerNav");
+      nav.classList.toggle("show-drawer");
+    }
+  </script>
+            
+            <nav class="quiz-nav">
+                
+              </nav>
+            </body>
+            </html>

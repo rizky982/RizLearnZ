@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Galeri Foto Estetik</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+
+.nav-home {
+  display: inline-block;
+  background-color: rgba(255, 139, 167, 0.9); /* warna pink transparan */
+  color: white;
+  text-decoration: none;
+  padding: 10px 24px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px); /* efek kaca */
+}
+
+.nav-home:hover {
+  background-color: rgba(255, 94, 120, 0.95); /* warna saat kursor di atas tombol */
+  transform: scale(1.05);
+}
+
+
+   .kolase {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  padding: 0;
+  max-width: 100%;
+  margin: 0;
+}
+  
+    .foto-kolase {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    }
+  
+    .foto-kolase img {
+      width: 100%;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+  
+    .foto-kolase:hover img {
+      transform: scale(1.05);
+    }
+  </style>
+
+<nav style="position: fixed; top: 20px; left: 20px; z-index: 1000;">
+  <a href="index.html" class="nav-home">Home</a>
+</nav>
+  
+  <div class="kolase">
+  
+    <div class="foto-kolase"><img src="./assets/images/k.jpg" alt=""></div>
+    <div class="foto-kolase"><img src="./assets/images/l.jpg" alt=""></div>
+  </div>
+
+  
+</body>
+</html>

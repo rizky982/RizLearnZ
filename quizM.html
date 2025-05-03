@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Kuis Sistem Komputer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Gaya tampilan tetap */
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #240046;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+            color: white;
+        }
+
+        #username-form {
+            text-align: center;
+            background: #3C096C;
+            padding: 40px;
+            border-radius: 15px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        #username-form input {
+            padding: 10px;
+            font-size: 1em;
+            border: none;
+            border-radius: 8px;
+            margin-top: 10px;
+            width: 80%;
+        }
+
+        #username-form button {
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 1em;
+            border: none;
+            border-radius: 8px;
+            background: #ffbe0b;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .question-container {
+            background: #3C096C;
+            padding: 40px;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            display: none;
+        }
+
+        .question { display: none; }
+        .question.active { display: block; }
+        .question p {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        .option-button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1em;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .option-button:nth-child(2) { background: #3a86ff; }
+        .option-button:nth-child(3) { background: #00b4d8; }
+        .option-button:nth-child(4) { background: #fb5607; }
+        .option-button:nth-child(5) { background: #ff006e; }
+
+        .option-button:hover { opacity: 0.8; }
+
+        .nav-buttons {
+            margin-top: 20px;
+            display: none;
+        }
+
+        .nav-buttons button {
+            padding: 12px 24px;
+            font-size: 1em;
+            border: none;
+            border-radius: 8px;
+            background: #ffbe0b;
+            color: black;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .progress {
+            width: 100%;
+            max-width: 500px;
+            height: 20px;
+            background: #eee;
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 20px auto 10px;
+            display: none;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(to right, #ff006e, #8338ec);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        #score-container {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top: 15px;
+            color: #fff;
+            display: none;
+        }
+
+        #final-score-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(36, 0, 70, 0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            animation: fadeIn 0.6s ease-in-out;
+        }
+
+        #final-score-box {
+            background: #7209b7;
+            padding: 50px 70px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            animation: scaleUp 0.6s ease;
+        }
+
+        #final-score-box h1 {
+            font-size: 4em;
+            margin: 0;
+            color: #fff;
+        }
+
+        #final-score-box p {
+            font-size: 1.5em;
+            margin-top: 15px;
+            color: #e0aaff;
+        }
+
+        @keyframes scaleUp {
+            0% { transform: scale(0.5); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- FORM USERNAME -->
+    <div id="username-form">
+        <h2>Masukkan Username Anda</h2>
+        <input type="text" id="usernameInput" placeholder="...">
+        <br>
+        <button onclick="startQuiz()">Mulai</button>
+    </div>
+
+    <!-- KUIS -->
+    <div class="question-container" id="quizContainer"></div>
+
+    <div class="nav-buttons" id="navButtons">
+        <button onclick="prevQuestion()" id="prevBtn">Sebelumnya</button>
+        <button onclick="nextQuestion()" id="nextBtn">Selanjutnya</button>
+        <button onclick="checkAnswers()" id="submitBtn" style="display:none;">Kumpulkan</button>
+    </div>
+
+    <div class="progress" id="progressWrapper">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <div id="score-container"></div>
+
+    <!-- OVERLAY HASIL -->
+    <div id="final-score-overlay">
+        <div id="final-score-box">
+            <h1 id="final-score-value"></h1>
+            <p id="final-score-message"></p>
+        </div>
+    </div>
+
+    <script>
+        const questions = [
+    { q: "Apa itu MikroTik?", options: ["Bahasa pemrograman jaringan", "Perangkat keras komputer", "Sistem operasi jaringan berbasis Linux", "Antivirus untuk jaringan"], answer: "c" },
+    { q: "Sistem operasi yang digunakan oleh MikroTik disebut...", options: ["Debian OS", "MikroLinux", "RouterBoard", "RouterOS"], answer: "d" },
+    { q: "Perangkat keras khusus dari MikroTik bernama...", options: ["RouterShell", "MikroBoard", "RouterBoard", "MikBox"], answer: "c" },
+    { q: "RouterOS digunakan untuk mengelola...", options: ["Gambar dan video", "Perangkat lunak desain", "Jaringan dan lalu lintas data", "Penyimpanan eksternal"], answer: "c" },
+    { q: "Fitur utama MikroTik meliputi, kecuali...", options: ["Routing", "Firewall", "Editing video", "VPN"], answer: "c" },
+    { q: "Untuk mengakses MikroTik secara grafis, digunakan aplikasi bernama...", options: ["Terminal", "SSH", "Winbox", "CMD"], answer: "c" },
+    { q: "Winbox berjalan pada sistem operasi...", options: ["Linux", "Android", "iOS", "Windows"], answer: "d" },
+    { q: "Salah satu fungsi firewall pada MikroTik adalah...", options: ["Membagi partisi harddisk", "Menyaring lalu lintas data", "Menghapus virus", "Mengatur tampilan desktop"], answer: "b" },
+    { q: "Apa itu NAT (Network Address Translation) di MikroTik?", options: ["Pengatur tampilan web", "Konversi alamat IP lokal ke publik", "Program desain jaringan", "Sistem manajemen pengguna"], answer: "b" },
+    { q: "MikroTik sering digunakan dalam jaringan...", options: ["Personal Home Theater", "Perusahaan dan ISP", "Toko kelontong", "Rumah sakit saja"], answer: "b" },
+    { q: "Untuk melihat lalu lintas data di MikroTik digunakan fitur...", options: ["Traffic Monitor", "IP Viewer", "Torch", "NetScan"], answer: "c" },
+    { q: "Apa kegunaan Bridge pada MikroTik?", options: ["Membuat IP publik", "Menghubungkan dua jaringan Layer 2", "Menyimpan data backup", "Mengatur kecepatan PC"], answer: "b" },
+    { q: "Jika ingin membagi bandwidth pengguna, fitur yang digunakan adalah...", options: ["DHCP", "Bandwidth Limit", "Firewall", "Load Balancer"], answer: "b" },
+    { q: "Untuk pengaturan IP statis, menu yang digunakan adalah...", options: ["Queue", "Address List", "IP > Address", "IP > Route"], answer: "c" },
+    { q: "Fungsi utama MikroTik dalam sebuah jaringan adalah...", options: ["Menyimpan data cloud", "Mengatur lalu lintas data dan keamanan jaringan", "Menginstal aplikasi", "Membuat desain grafis"], answer: "b" }
+];
+
+
+        let current = 0;
+        const answers = {};
+        const quizContainer = document.getElementById("quizContainer");
+
+        function renderQuestions() {
+            questions.forEach((q, index) => {
+                const div = document.createElement("div");
+                div.className = "question";
+                if (index === 0) div.classList.add("active");
+
+                const buttons = q.options.map((opt, i) => {
+                    const val = String.fromCharCode(97 + i);
+                    return `<button class="option-button" onclick="selectAnswer(${index}, '${val}', this)">${opt}</button>`;
+                }).join("");
+
+                div.innerHTML = `<p>${q.q}</p>${buttons}`;
+                quizContainer.appendChild(div);
+            });
+        }
+
+        function selectAnswer(index, value, btn) {
+            answers[index] = value;
+            const buttons = btn.parentElement.querySelectorAll(".option-button");
+            buttons.forEach(b => b.style.opacity = 0.6);
+            btn.style.opacity = 1;
+        }
+
+        function updateButtons() {
+            document.getElementById("prevBtn").disabled = current === 0;
+            document.getElementById("nextBtn").style.display = current === questions.length - 1 ? "none" : "inline-block";
+            document.getElementById("submitBtn").style.display = current === questions.length - 1 ? "inline-block" : "none";
+            updateProgress();
+        }
+
+        function showQuestion(index) {
+            document.querySelectorAll(".question").forEach((q, i) => {
+                q.classList.toggle("active", i === index);
+            });
+            updateButtons();
+        }
+
+        function nextQuestion() {
+            if (current < questions.length - 1) {
+                current++;
+                showQuestion(current);
+            }
+        }
+
+        function prevQuestion() {
+            if (current > 0) {
+                current--;
+                showQuestion(current);
+            }
+        }
+
+        function updateProgress() {
+            const progressBar = document.getElementById("progressBar");
+            const percent = ((current + 1) / questions.length) * 100;
+            progressBar.style.width = percent + "%";
+        }
+
+        function checkAnswers() {
+            let score = 0;
+            questions.forEach((q, i) => {
+                if (answers[i] === q.answer) score++;
+            });
+            const percent = Math.round((score / questions.length) * 100);
+            const overlay = document.getElementById("final-score-overlay");
+            const scoreValue = document.getElementById("final-score-value");
+            const scoreMessage = document.getElementById("final-score-message");
+            scoreValue.textContent = `${percent}%`;
+            scoreMessage.textContent = `Kamu menjawab ${score} dari ${questions.length} soal dengan benar`;
+            overlay.style.display = "flex";
+        }
+
+        function startQuiz() {
+            const username = document.getElementById("usernameInput").value.trim();
+            if (username === "") {
+                alert("Silakan masukkan username terlebih dahulu!");
+                return;
+            }
+
+            // Sembunyikan form dan tampilkan kuis
+            document.getElementById("username-form").style.display = "none";
+            quizContainer.style.display = "block";
+            document.getElementById("navButtons").style.display = "block";
+            document.getElementById("progressWrapper").style.display = "block";
+            document.getElementById("score-container").style.display = "block";
+
+            renderQuestions();
+            updateButtons();
+        }
+    </script>
+</body>
+</html>
