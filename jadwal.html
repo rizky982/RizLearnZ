@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jadwal Belajar - RizLearnZ</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+      color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1000px;
+      background-color: #1c1c1c;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(255, 165, 0, 0.3);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ffa500;
+      margin-bottom: 30px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 16px;
+      border: 1px solid #333;
+      text-align: center;
+    }
+
+    th {
+      background-color: #333;
+      color: #ffa500;
+    }
+
+    tr:nth-child(even) {
+      background-color: #2a2a2a;
+    }
+
+    tr:hover {
+      background-color: #383838;
+    }
+
+    .back-button {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .back-button a {
+      text-decoration: none;
+      padding: 12px 24px;
+      background-color: #ffa500;
+      color: #000;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .back-button a:hover {
+      background-color: #ff8c00;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      th {
+        display: none;
+      }
+
+      td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+      }
+
+      td::before {
+        position: absolute;
+        top: 10px;
+        left: 15px;
+        width: 45%;
+        white-space: nowrap;
+        font-weight: bold;
+        color: #ffa500;
+        content: attr(data-label);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📅 Jadwal Belajar Mingguan</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Hari</th>
+          <th>Materi</th>
+          <th>Waktu</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Hari">Senin</td>
+          <td data-label="Materi">HTML & CSS</td>
+          <td data-label="Waktu">19.00 - 20.00</td>
+        </tr>
+        <tr>
+          <td data-label="Hari">Selasa</td>
+          <td data-label="Materi">Networking (IP/Subnet)</td>
+          <td data-label="Waktu">19.00 - 20.30</td>
+        </tr>
+        <tr>
+          <td data-label="Hari">Rabu</td>
+          <td data-label="Materi">JavaScript Dasar</td>
+          <td data-label="Waktu">18.30 - 20.00</td>
+        </tr>
+        <tr>
+          <td data-label="Hari">Kamis</td>
+          <td data-label="Materi">Review & Latihan Soal</td>
+          <td data-label="Waktu">19.00 - 20.00</td>
+        </tr>
+        <tr>
+          <td data-label="Hari">Jumat</td>
+          <td data-label="Materi">Project Mini Website</td>
+          <td data-label="Waktu">20.00 - 21.00</td>
+        </tr>
+        <tr>
+          <td data-label="Hari">Sabtu</td>
+          <td data-label="Materi">Relaksasi + Explore Tools</td>
+          <td data-label="Waktu">Bebas</td>
+        </tr>
+        <tr>
+          <td data-label="Hari">Minggu</td>
+          <td data-label="Materi">Libur / Revisi</td>
+          <td data-label="Waktu">Bebas</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="back-button">
+      <a href="index.html">⬅ Kembali ke Beranda</a>
+    </div>
+  </div>
+</body>
+</html>

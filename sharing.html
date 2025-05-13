@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sharing Pengalaman - RizLearnZ</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+
+    nav {
+      background-color: #1e1e1e;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+
+    nav a {
+      color: #ff9800;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffc107;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 10px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      color: #ffa726;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+
+    .card {
+      background-color: #1e1e1e;
+      margin-bottom: 30px;
+      border-left: 5px solid #ffa726;
+      border-radius: 10px;
+      padding: 25px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(255, 152, 0, 0.2);
+    }
+
+    .card h2 {
+      color: #ffcc80;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #ccc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #888;
+      background-color: #1e1e1e;
+      border-top: 1px solid #333;
+      margin-top: 50px;
+    }
+
+    @media screen and (max-width: 768px) {
+      header h1 {
+        font-size: 2em;
+      }
+      .card {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="blog.html">&larr; Kembali ke Blog</a>
+  </nav>
+
+  <header>
+    <h1>📢 Sharing Pengalaman</h1>
+  </header>
+
+  <div class="container">
+
+    <div class="card">
+      <h2>📌 Pengalaman Pertamaku Presentasi di Depan Kelas</h2>
+      <p>
+        Pertama kali maju presentasi untuk menjelaskan topologi jaringan, rasanya deg-degan banget. Tapi setelah latihan, belajar intonasi, dan memahami materi dengan baik, akhirnya lancar juga. Guru dan teman-teman bahkan kasih apresiasi, itu bikin aku makin percaya diri.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>🧠 Cerita Seru Saat Praktek Jaringan</h2>
+      <p>
+        Saat pertama kali praktik membuat jaringan LAN, aku sempat salah colok kabel UTP. Tapi setelah diskusi dengan teman dan cek ulang topologi, akhirnya jaringan bisa konek! Pengalaman ini ngajarin pentingnya teliti dan teamwork.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>🛠️ Keseruan Bongkar Pasang Komputer</h2>
+      <p>
+        Saat pelajaran perakitan komputer, aku belajar cara pasang RAM, Harddisk, PSU, dan pastikan semua koneksi power nyambung. Sempat bingung waktu PC gak nyala, ternyata salah pasang tombol power dari front panel ke motherboard 😅.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>💻 Magang di Tempat Service Komputer</h2>
+      <p>
+        Waktu magang, aku bantu install ulang Windows, bersihkan laptop, bahkan ganti keyboard laptop. Paling menantang saat harus install ulang sistem dengan partisi custom — aku jadi lebih paham soal sistem file dan recovery.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>🌐 Membantu Setting WiFi Tetangga</h2>
+      <p>
+        Aku pernah bantu tetangga setting ulang router WiFi yang lupa password. Aku reset router, login lewat 192.168.1.1, dan atur ulang SSID serta password. Mereka senang banget, dan aku jadi ngerti lebih dalam soal router.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>📶 Belajar Uji Koneksi Pakai CMD</h2>
+      <p>
+        Uji koneksi sering aku lakuin pakai perintah <code>ping</code> di CMD. Misalnya, <code>ping 8.8.8.8</code> untuk uji koneksi ke internet, atau <code>ping 192.168.1.1</code> ke router. Kalau reply-nya muncul, berarti koneksi aman!
+      </p>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2025 RizLearnZ | Sharing Pengalaman Dunia TKJ
+  </footer>
+
+</body>
+</html>

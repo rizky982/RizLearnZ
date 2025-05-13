@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tutorial TKJ - RizLearnZ</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #f0f0f0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #1e1e1e;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(255, 165, 0, 0.2);
+    }
+
+    header h1 {
+      color: #ffa500;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    section {
+      background-color: #1a1a1a;
+      margin-bottom: 30px;
+      padding: 20px;
+      border-left: 4px solid #ffa500;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255, 165, 0, 0.1);
+    }
+
+    section h2 {
+      color: #ffb347;
+      margin-top: 0;
+    }
+
+    section p {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .back {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .back a {
+      background-color: #ffa500;
+      color: #000;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .back a:hover {
+      background-color: #ff8c00;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📘 Tutorial Teknik Komputer dan Jaringan</h1>
+  </header>
+
+  <div class="container">
+
+    <section>
+      <h2>1. Cara Install VirtualBox</h2>
+      <p>VirtualBox adalah software untuk menjalankan sistem operasi virtual. Unduh dari situs resminya, lalu install seperti biasa. Setelah itu, kamu bisa mulai membuat mesin virtual untuk belajar jaringan tanpa harus menggunakan perangkat fisik.</p>
+    </section>
+
+    <section>
+      <h2>2. Cara Install Debian di VirtualBox</h2>
+      <p>Setelah VirtualBox terpasang, buat mesin virtual baru, pilih sistem operasi Debian. Gunakan file ISO Debian saat instalasi, atur partisi, dan ikuti panduan hingga selesai.</p>
+    </section>
+
+    <section>
+      <h2>3. Konfigurasi IP Address</h2>
+      <p>Buka terminal di Debian, lalu gunakan perintah <code>nano /etc/network/interfaces</code> untuk mengatur IP secara manual. Misalnya: <code>address 192.168.1.2</code> dan <code>netmask 255.255.255.0</code>.</p>
+    </section>
+
+    <section>
+      <h2>4. Instalasi FTP Server</h2>
+      <p>Gunakan perintah <code>apt install vsftpd</code>. Setelah itu, konfigurasi file <code>/etc/vsftpd.conf</code> agar client bisa mengakses file lewat FileZilla.</p>
+    </section>
+
+    <section>
+      <h2>5. Instalasi Web Server (Apache)</h2>
+      <p>Pasang dengan <code>apt install apache2</code>. Setelah selesai, buka browser dan akses IP server. Jika muncul halaman default Apache, berarti server berhasil dijalankan.</p>
+    </section>
+
+    <section>
+      <h2>6. Upload Website ke Web Server</h2>
+      <p>Letakkan file HTML ke folder <code>/var/www/html</code>. Gunakan perintah <code>cp</code> atau upload via FTP. Pastikan permission file sudah sesuai agar bisa diakses dari browser.</p>
+    </section>
+
+    <section>
+      <h2>7. Konfigurasi DNS Server</h2>
+      <p>Install paket <code>bind9</code>, lalu konfigurasi file zone dan named.conf.local. DNS memungkinkan kamu mengakses server menggunakan nama domain lokal seperti <code>www.rizlearnz.com</code>.</p>
+    </section>
+
+    <section>
+      <h2>8. Instalasi DHCP Server</h2>
+      <p>Gunakan <code>apt install isc-dhcp-server</code>. Atur file konfigurasi <code>/etc/dhcp/dhcpd.conf</code> dengan rentang IP yang ingin diberikan secara otomatis ke client.</p>
+    </section>
+
+    <section>
+      <h2>9. Konfigurasi Mikrotik Dasar</h2>
+      <p>Hubungkan Mikrotik ke laptop via Winbox. Atur IP, NAT, dan DHCP Server dari menu IP > Addresses, DHCP Server, dan NAT. Mikrotik membantu mengatur jaringan secara profesional.</p>
+    </section>
+
+    <section>
+      <h2>10. Konfigurasi Jaringan LAN</h2>
+      <p>Sambungkan beberapa PC menggunakan switch dan atur IP masing-masing. Pastikan semua berada di satu jaringan agar bisa saling terhubung. Tes dengan perintah <code>ping</code>.</p>
+    </section>
+
+    <section>
+      <h2>11. Uji Koneksi Jaringan</h2>
+      <p>Lakukan tes koneksi dengan <code>ping</code>. Contoh: <code>ping 192.168.1.1</code>. Jika balasan muncul, koneksi berhasil. Jika tidak, cek kabel, IP, dan pengaturan firewall.</p>
+    </section>
+
+    <section>
+      <h2>12. Backup & Restore Konfigurasi</h2>
+      <p>Untuk Mikrotik, gunakan fitur “Export” dan “Import” di Winbox. Di Linux, kamu bisa backup file konfigurasi dengan perintah <code>cp</code> dan simpan di tempat aman. Penting untuk menghindari kehilangan konfigurasi penting.</p>
+    </section>
+
+    <div class="back">
+      <a href="blog.html">⬅ Kembali ke Blog</a>
+    </div>
+  </div>
+</body>
+</html>

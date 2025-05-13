@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tips Belajar TKJ</title>
+  <style>
+    body {
+      background: #0d0d0d;
+      font-family: 'Segoe UI', sans-serif;
+      color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      color: #FFA500;
+      margin-bottom: 30px;
+    }
+    .card {
+      background-color: #1a1a1a;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 20px rgba(255, 165, 0, 0.2);
+    }
+    h2 {
+      color: #FFD700;
+      border-left: 5px solid #FF8C00;
+      padding-left: 10px;
+    }
+    h3 {
+      color: #87CEFA;
+    }
+    p {
+      line-height: 1.7;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    a {
+      color: #1E90FF;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Tips Belajar TKJ: Dasar Jaringan Komputer</h1>
+
+    <div class="card">
+      <h2>📘 5 Cara Cepat Paham Jaringan Komputer</h2>
+      <ol>
+        <li><strong>Pahami Konsep Dasar Jaringan</strong><br />
+          Sebelum masuk ke praktik, pelajari dulu pengertian jaringan komputer, fungsinya, dan bagaimana data dikirim dari satu perangkat ke perangkat lain.</li>
+
+        <li><strong>Pelajari Jenis-Jenis Topologi</strong><br />
+          Misalnya: Topologi Bus, Star, Ring. Ini penting untuk memahami bagaimana perangkat terhubung.</li>
+
+        <li><strong>Kenali Perangkat Jaringan</strong><br />
+          Seperti Switch, Router, Hub, Access Point, dan LAN Card. Ketahui fungsi dan cara penggunaannya.</li>
+
+        <li><strong>Latihan IP Addressing</strong><br />
+          Coba buat IP Address manual, pahami kelas IP (A, B, C), subnetting, dan pentingnya gateway dan DNS.</li>
+
+        <li><strong>Simulasikan dengan Cisco Packet Tracer / VirtualBox</strong><br />
+          Gunakan software ini untuk praktik membuat jaringan, memberi IP, dan menghubungkan antar perangkat.</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h2>🔌 Perbedaan Switch dan Router Dijelaskan Sederhana</h2>
+      <p><strong>Switch</strong> bekerja di layer 2 OSI, tugasnya untuk menghubungkan banyak perangkat dalam satu jaringan LAN. Switch mengirim data berdasarkan MAC Address.</p>
+      <p><strong>Router</strong> bekerja di layer 3 OSI, digunakan untuk menghubungkan dua jaringan berbeda. Router menentukan jalur terbaik untuk mengirim data melalui IP Address.</p>
+      <ul>
+        <li><strong>Switch:</strong> Untuk menghubungkan komputer di dalam satu jaringan (internal)</li>
+        <li><strong>Router:</strong> Untuk menghubungkan jaringan lokal ke jaringan luar (internet)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>🧠 Pahami Konsep IP Address</h2>
+      <p><strong>IP Address</strong> adalah alamat unik yang dimiliki setiap perangkat di jaringan. Contoh: <code>192.168.1.1</code></p>
+      <ul>
+        <li><strong>Kelas A:</strong> 1.0.0.0 – 126.255.255.255</li>
+        <li><strong>Kelas B:</strong> 128.0.0.0 – 191.255.255.255</li>
+        <li><strong>Kelas C:</strong> 192.0.0.0 – 223.255.255.255</li>
+      </ul>
+      <p>Pahami juga <strong>Subnet Mask</strong>, <strong>Gateway</strong>, dan <strong>DNS</strong> karena itu penting agar jaringan bisa berkomunikasi dengan baik.</p>
+    </div>
+
+    <div class="card">
+      <h2>🧰 Tools yang Wajib Dikuasai</h2>
+      <ul>
+        <li><strong>Packet Tracer:</strong> Simulasi jaringan virtual</li>
+        <li><strong>VirtualBox:</strong> Instalasi OS server seperti Debian</li>
+        <li><strong>CMD / Terminal:</strong> Untuk uji koneksi (ping, ipconfig, ifconfig)</li>
+        <li><strong>Notepad++ / VS Code:</strong> Coding web atau konfigurasi file jaringan</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>🎯 Tips Belajar Efektif</h2>
+      <ul>
+        <li>Bikin catatan visual (mind map / diagram)</li>
+        <li>Gabung komunitas belajar seperti Discord atau Telegram</li>
+        <li>Tonton YouTube channel edukatif seperti KelasTKJ, Web Programming UNPAS, dan Linux ID</li>
+        <li>Latihan secara konsisten dan buat mini project</li>
+      </ul>
+    </div>
+
+
+    <nav style="
+  background-color: #111;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(255, 165, 0, 0.2);
+  border-bottom: 1px solid #ffa50020;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+">
+  <div style="color: #FFA500; font-weight: bold; font-size: 20px;">
+    🌐 RizLearnZ
+  </div>
+  <div>
+    <a href="blog.html" style="
+      color: #fff;
+      background: #ffa500;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    " onmouseover="this.style.background='#ff8800'" onmouseout="this.style.background='#ffa500'">🏠 Beranda</a>
+  </div>
+</nav>
+
+  </div>
+</body>
+</html>

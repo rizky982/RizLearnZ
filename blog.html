@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog - RizLearnZ</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #111;
+      color: #f0f0f0;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ffa500;
+      font-size: 42px;
+      margin-bottom: 40px;
+    }
+
+    .section {
+      background-color: #1c1c1c;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 165, 0, 0.12);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(255, 165, 0, 0.3);
+    }
+
+    .section h2 {
+      color: #ffb347;
+      margin-bottom: 10px;
+    }
+
+    .section ul {
+      padding-left: 20px;
+      color: #ccc;
+    }
+
+    .section ul li {
+      margin-bottom: 6px;
+    }
+
+    .back-button {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .back-button a {
+      text-decoration: none;
+      padding: 12px 24px;
+      background-color: #ffa500;
+      color: #000;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .back-button a:hover {
+      background-color: #ff8c00;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 28px; }
+    }
+    
+    .link-title {
+  color: #ffb347;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.link-title:hover {
+  color: #ffb347;
+  text-decoration: underline;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📚 Blog RizLearnZ</h1>
+
+    <div class="section">
+      <h2><a href="tips-belajar.html" class="link-title">📘 Tips Belajar TKJ</a></h2>
+      <ul>
+        <li>“5 Cara Cepat Paham Jaringan Komputer”</li>
+        <li>“Perbedaan Switch dan Router Dijelaskan Sederhana”</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><a href="tips-belajar.html" class="link-title">📓 Catatan Pribadi Perjalanan Belajar</h2>
+      <ul>
+        <li>“Progress Belajarku Minggu Ini”</li>
+        <li>“Kenapa Aku Memilih Jurusan TKJ”</li>
+      </ul>
+    </div>
+
+    <div class="section">
+     <h2><a href="tutorial.html" class="link-title">🔧 Tutorial</h2>
+      <ul>
+        <li>“Cara Install Debian Server di VirtualBox”</li>
+        <li>“Bikin Web Portofolio Sederhana Pakai HTML + CSS”</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><a href="info-it.html" class="link-title">🌐 Info Seputar Dunia IT</h2>
+      <ul>
+        <li>“Apa Itu Cloud Computing?”</li>
+        <li>“Prospek Kerja Anak TKJ di 2025”</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><a href="sumber-belajar.html" class="link-title">🛠️ Rekomendasi Sumber Belajar</h2>
+      <ul>
+        <li>“Channel YouTube Favoritku Buat Belajar Coding”</li>
+        <li>“Website Terbaik Buat Latihan Jaringan”</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><a href="sharing.html" class="link-title">💬 Sharing Pengalaman</h2>
+      <ul>
+        <li>“Pengalaman Pertamaku Presentasi di Depan Kelas”</li>
+        <li>“Cerita Seru Saat Praktek Jaringan di Sekolah”</li>
+      </ul>
+    </div>
+    
+    <div class="section">
+     <h2><a href="tols.html" class="link-title">🛠️ Tools & Referensi</h2>
+      <p>Berisi berbagai alat dan situs penting untuk belajar seperti Visual Studio Code, draw.io, GitHub, dan dokumentasi TKJ lainnya yang memudahkan pembelajaran sehari-hari.</p>
+    </div>
+
+    <div class="section">
+      <h2><a href="perkembangan.html" class="link-title">🚀 Perkembangan Skill / Journey</h2>
+      <p>Catatan perjalanan saya dalam belajar dunia komputer & jaringan, mulai dari error pertama, project yang berhasil, hingga pengalaman mengikuti lomba atau sertifikasi.</p>
+    </div>
+    
+
+    <div class="back-button">
+      <a href="index.html">⬅ Kembali ke Beranda</a>
+    </div>
+  </div>
+</body>
+</html>
