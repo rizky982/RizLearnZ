@@ -6,18 +6,25 @@
   <title>RizLearnZ Intro</title>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+
+    body {
       background: radial-gradient(circle at center, #1e1e1e, #0d0d0d);
-      height: 100vh;
       color: white;
       font-family: 'Segoe UI', sans-serif;
-      text-align: center;
-      overflow: hidden;
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+      padding: 20px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+      text-align: center;
     }
 
     .logo-img {
@@ -52,12 +59,6 @@
       transform: scale(1.05);
     }
 
-    button:active {
-      transform: scale(0.95);
-      background-color: #d67300;
-      box-shadow: 0 0 5px #ff9900;
-    }
-
     .slogan {
       font-family: 'Dancing Script', cursive;
       font-size: 1.5rem;
@@ -73,14 +74,16 @@
       transform: translateY(0);
     }
 
-    /* Navbar atas kanan */
+    /* Navbar */
     .navbar {
       position: absolute;
       top: 20px;
-      right: 40px;
+      left: 0;
+      right: 0;
+      padding: 0 20px;
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      gap: 30px;
       z-index: 1000;
     }
 
@@ -92,93 +95,113 @@
     }
 
     .navbar-links {
-      list-style: none;
       display: flex;
       gap: 25px;
-      margin: 0;
-      padding: 0;
+      list-style: none;
     }
 
     .navbar-links li a {
       text-decoration: none;
       color: white;
       font-weight: 500;
-      transition: color 0.3s ease;
+      font-family: 'Segoe UI', sans-serif;
+      position: relative;
     }
 
-    .navbar-links li a:hover {
+    .navbar-links li a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      left: 0;
+      bottom: -5px;
+      background-color: #ff9900;
+      transition: width 0.3s ease;
+    }
+
+    .navbar-links li a:hover::after {
+      width: 100%;
+    }
+
+    /* Hamburger icon */
+    .hamburger {
+      display: none;
+      font-size: 1.5rem;
+      color: white;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    /* Drawer menu */
+    .drawer {
+      position: fixed;
+      top: 0;
+      right: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: #1c1c1c;
+      box-shadow: -2px 0 8px rgba(0, 0, 0, 0.5);
+      padding: 60px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      transition: right 0.3s ease;
+      z-index: 999;
+    }
+
+    .drawer a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    .drawer a:hover {
       color: #ff9900;
     }
 
+    .drawer.open {
+      right: 0;
+    }
 
-    .navbar {
-  position: absolute;
-  top: 20px;
-  left: 0;
-  right: 0;
-  padding: 0 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 1000;
-}
+    .drawer-close {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 1.5rem;
+      color: white;
+      cursor: pointer;
+    }
 
-.navbar-logo {
-  font-size: 1.2rem;
-  color: #ffcc70;
-  font-weight: bold;
-  font-family: 'Courier New', monospace;
-  margin-right: auto;
-}
+    @media (max-width: 768px) {
+      .navbar-links {
+        display: none;
+      }
 
-.navbar-links {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-  margin: 0;
-  padding: 0;
-}
+      .hamburger {
+        display: block;
+      }
+    }
 
-.navbar-links li a {
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
+    @media (max-width: 400px) {
+      .logo-img {
+        width: 150px;
+        height: 150px;
+      }
 
-.navbar-links li a:hover {
-  color: #ff9900;
-}
+      button {
+        font-size: 0.9rem;
+        padding: 10px 24px;
+      }
 
-
-
-.navbar-links li a {
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-  position: relative;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.navbar-links li a::after {
-  content: '';
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  left: 0;
-  bottom: -5px;
-  background-color: #ff9900;
-  transition: width 0.3s ease;
-}
-
-.navbar-links li a:hover::after {
-  width: 100%;
-}
+      .slogan {
+        font-size: 1.2rem;
+      }
+    }
 
   </style>
 </head>
 <body>
-  <!-- Navbar Atas Kanan -->
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="navbar-logo">RizLearnZ</div>
     <ul class="navbar-links">
@@ -187,19 +210,37 @@
       <li><a href="contact.html">Contact</a></li>
       <li><a href="blog.html">Blog</a></li>
     </ul>
+    <div class="hamburger" onclick="toggleDrawer()">☰</div>
   </nav>
+
+  <!-- Drawer Menu (mobile) -->
+  <div class="drawer" id="drawerMenu">
+   
+   
+
+    <a href="Purpose.html">Purpose</a>
+    <a href="visi.html">Vision & Mission</a>
+    <a href="contact.html">Contact</a>
+    <a href="blog.html">Blog</a>
+  </div>
 
   <!-- Konten Tengah -->
   <img src="./assets/images/lo.png" alt="RizLearnZ Logo" class="logo-img" id="logo" />
   <button onclick="window.location.href='portfolio.html'" id="enterBtn">Portfolio Website</button>
-  <p class="slogan" id="slogan"></p>
+  <p class="slogan" id="slogan">Learn. Build. Inspire.</p>
 
+  <!-- Script -->
   <script>
     window.addEventListener("load", () => {
       document.getElementById("logo").classList.add("show");
       document.getElementById("enterBtn").classList.add("show");
       document.getElementById("slogan").classList.add("show");
     });
+
+    function toggleDrawer() {
+      const drawer = document.getElementById("drawerMenu");
+      drawer.classList.toggle("open");
+    }
   </script>
 </body>
 </html>
